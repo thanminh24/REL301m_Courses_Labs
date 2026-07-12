@@ -7,10 +7,10 @@
   },
   "seed": 0,
   "metrics": {
-   "collisions_per_ep": 0.78,
-   "food_per_ep": 25.98,
-   "illegal_per_ep": 0.14,
-   "mean_dist_to_enemy": 4.192256034293501
+   "collisions_per_ep": 0.64,
+   "food_per_ep": 26.18,
+   "illegal_per_ep": 0.2,
+   "mean_dist_to_enemy": 4.284851689291531
   }
  },
  {
@@ -21,10 +21,10 @@
   },
   "seed": 1,
   "metrics": {
-   "collisions_per_ep": 0.94,
-   "food_per_ep": 25.62,
-   "illegal_per_ep": 0.72,
-   "mean_dist_to_enemy": 4.198434776843985
+   "collisions_per_ep": 0.88,
+   "food_per_ep": 26.06,
+   "illegal_per_ep": 0.32,
+   "mean_dist_to_enemy": 4.237702664649398
   }
  },
  {
@@ -35,10 +35,10 @@
   },
   "seed": 0,
   "metrics": {
-   "collisions_per_ep": 0.72,
-   "food_per_ep": 26.3,
+   "collisions_per_ep": 0.64,
+   "food_per_ep": 26.32,
    "illegal_per_ep": 0.12,
-   "mean_dist_to_enemy": 4.29365831428745
+   "mean_dist_to_enemy": 4.313634594767449
   }
  },
  {
@@ -49,10 +49,10 @@
   },
   "seed": 1,
   "metrics": {
-   "collisions_per_ep": 0.58,
-   "food_per_ep": 26.46,
-   "illegal_per_ep": 0.12,
-   "mean_dist_to_enemy": 4.194954891923143
+   "collisions_per_ep": 0.8,
+   "food_per_ep": 26.22,
+   "illegal_per_ep": 0.06,
+   "mean_dist_to_enemy": 4.185606791758594
   }
  },
  {
@@ -64,9 +64,9 @@
   "seed": 0,
   "metrics": {
    "collisions_per_ep": 0.86,
-   "food_per_ep": 26.22,
-   "illegal_per_ep": 0.34,
-   "mean_dist_to_enemy": 4.200937618600058
+   "food_per_ep": 26.1,
+   "illegal_per_ep": 0.02,
+   "mean_dist_to_enemy": 4.22161679711515
   }
  },
  {
@@ -77,10 +77,10 @@
   },
   "seed": 1,
   "metrics": {
-   "collisions_per_ep": 0.66,
-   "food_per_ep": 25.82,
-   "illegal_per_ep": 0.3,
-   "mean_dist_to_enemy": 4.356822870734533
+   "collisions_per_ep": 0.7,
+   "food_per_ep": 26.26,
+   "illegal_per_ep": 0.1,
+   "mean_dist_to_enemy": 4.260123629398358
   }
  }
 ]
