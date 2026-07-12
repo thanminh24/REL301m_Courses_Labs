@@ -6,3 +6,7 @@ __pycache__/
 
 .DS_Store
 Thumbs.db
+
+# Group Assignment (merged from Group Assignment/.gitignore)
+Group Assignment/**/artifacts/
+Group Assignment/**/demo/

@@ -1,0 +1,66 @@
+[
+ {
+  "direction": 3,
+  "experiment": "shaping",
+  "config": {
+   "shaped": false
+  },
+  "seed": 0,
+  "metrics": {
+   "vs_random": {
+    "win": 1.0,
+    "draw": 0.0,
+    "loss": 0.0
+   },
+   "curve_tail_mean": 27.2
+  }
+ },
+ {
+  "direction": 3,
+  "experiment": "shaping",
+  "config": {
+   "shaped": true
+  },
+  "seed": 0,
+  "metrics": {
+   "vs_random": {
+    "win": 1.0,
+    "draw": 0.0,
+    "loss": 0.0
+   },
+   "curve_tail_mean": 33.97119996932097
+  }
+ },
+ {
+  "direction": 3,
+  "experiment": "shaping",
+  "config": {
+   "shaped": false
+  },
+  "seed": 1,
+  "metrics": {
+   "vs_random": {
+    "win": 1.0,
+    "draw": 0.0,
+    "loss": 0.0
+   },
+   "curve_tail_mean": 28.25
+  }
+ },
+ {
+  "direction": 3,
+  "experiment": "shaping",
+  "config": {
+   "shaped": true
+  },
+  "seed": 1,
+  "metrics": {
+   "vs_random": {
+    "win": 1.0,
+    "draw": 0.0,
+    "loss": 0.0
+   },
+   "curve_tail_mean": 26.41214911532082
+  }
+ }
+]

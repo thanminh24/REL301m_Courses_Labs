@@ -1,0 +1,86 @@
+[
+ {
+  "direction": 3,
+  "experiment": "regimes",
+  "config": {
+   "regime": "peaceful"
+  },
+  "seed": 0,
+  "metrics": {
+   "collisions_per_ep": 0.78,
+   "food_per_ep": 25.98,
+   "illegal_per_ep": 0.14,
+   "mean_dist_to_enemy": 4.192256034293501
+  }
+ },
+ {
+  "direction": 3,
+  "experiment": "regimes",
+  "config": {
+   "regime": "peaceful"
+  },
+  "seed": 1,
+  "metrics": {
+   "collisions_per_ep": 0.94,
+   "food_per_ep": 25.62,
+   "illegal_per_ep": 0.72,
+   "mean_dist_to_enemy": 4.198434776843985
+  }
+ },
+ {
+  "direction": 3,
+  "experiment": "regimes",
+  "config": {
+   "regime": "default"
+  },
+  "seed": 0,
+  "metrics": {
+   "collisions_per_ep": 0.72,
+   "food_per_ep": 26.3,
+   "illegal_per_ep": 0.12,
+   "mean_dist_to_enemy": 4.29365831428745
+  }
+ },
+ {
+  "direction": 3,
+  "experiment": "regimes",
+  "config": {
+   "regime": "default"
+  },
+  "seed": 1,
+  "metrics": {
+   "collisions_per_ep": 0.58,
+   "food_per_ep": 26.46,
+   "illegal_per_ep": 0.12,
+   "mean_dist_to_enemy": 4.194954891923143
+  }
+ },
+ {
+  "direction": 3,
+  "experiment": "regimes",
+  "config": {
+   "regime": "aggressive"
+  },
+  "seed": 0,
+  "metrics": {
+   "collisions_per_ep": 0.86,
+   "food_per_ep": 26.22,
+   "illegal_per_ep": 0.34,
+   "mean_dist_to_enemy": 4.200937618600058
+  }
+ },
+ {
+  "direction": 3,
+  "experiment": "regimes",
+  "config": {
+   "regime": "aggressive"
+  },
+  "seed": 1,
+  "metrics": {
+   "collisions_per_ep": 0.66,
+   "food_per_ep": 25.82,
+   "illegal_per_ep": 0.3,
+   "mean_dist_to_enemy": 4.356822870734533
+  }
+ }
+]
