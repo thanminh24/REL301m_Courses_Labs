@@ -13,7 +13,7 @@
 
 **Local workspace for REL301m reinforcement learning practice: bandits, dynamic programming, temporal-difference learning, Dyna-Q, function approximation, and course assignments.**
 
-[Labs](#labs) | [Assignments](#assignments) | [Course Materials](#course-materials) | [Quick Start](#quick-start) | [Project Layout](#project-layout)
+[Complete Exam Guide](docs/rel301m-complete-learning-guide.md) | [Labs](#labs) | [Assignments](#assignments) | [Course Materials](#course-materials) | [Quick Start](#quick-start) | [Project Layout](#project-layout)
 
 </div>
 
@@ -26,6 +26,27 @@
 - **Assignment workspace** - assignment notebooks and helper files are kept in a separate `Assignment 1/` folder.
 - **Reference materials** - original student notebooks, lecture slides, and course PDFs live under `docs/`.
 - **Clean Lab 3 structure** - Lab 3.4 and Lab 3.5 now have direct folders instead of generic `Files (*)` names.
+
+---
+
+## Exam Canon and Evidence
+
+All Q001–Q317 appeared in tests, so all **317 questions are canonical exam material**.
+Canonical means examinable; it does not mean every supplied answer is verified by a reference.
+The complete guide keeps the supplied test-bank answer visible while marking the evidence tier
+and any conceptual correction.
+
+| Primary evidence tier | Questions | Status |
+|---|---:|---|
+| Local lecture slides | 225 | answer-bearing slide mapping |
+| Sutton–Barto reference book | 54 | page-level fallback, visibly marked as book-supported |
+| Official public Coursera pages | 0 | course alignment only; no direct answer-bearing mapping |
+| Supplied test-bank key only | 38 | canonical for exam recall, but not reference-verified |
+
+Only publicly visible official Coursera descriptions were inspected. No login, paywall, gated
+lesson, video, transcript, quiz, or assignment content was accessed or crawled. Legacy `OUT`
+and `discard` labels in the source audit describe mapping or question quality; they do not
+exclude any of the 317 tested questions.
 
 ---
 
@@ -66,6 +87,25 @@ jupyter lab "Lab 2"
 jupyter lab "Lab 3"
 jupyter lab "Assignment 1"
 ```
+
+### Quiz-style study app
+
+The offline-capable study app contains all 317 canonical questions with
+separate school-bank and conceptual grading:
+
+**Live site:** [https://thanminh24.github.io/rel301m/](https://thanminh24.github.io/rel301m/)
+
+```bash
+cd study-app
+npm ci
+npm run dev
+```
+
+Its core modes are Question Bank, Flashcards, Match, adaptive Learn,
+configurable Test, and local Progress. Run the complete release gate with
+`npm run verify`; see
+[`study-app/docs/quizlet-parity-matrix.md`](study-app/docs/quizlet-parity-matrix.md)
+for the implemented product boundary.
 
 ---
 
@@ -124,10 +164,13 @@ jupyter lab "Assignment 1"
 
 | Path | Description |
 |------|-------------|
+| [`docs/rel301m-complete-learning-guide.md`](docs/rel301m-complete-learning-guide.md) | Canonical question-first route for all 317 tested questions: 225 slide-supported, 54 book-supported, and 38 visibly bank-key-only; public Coursera pages confirm alignment but directly support 0 answers |
+| [`docs/final-exam-revision-question-index.md`](docs/final-exam-revision-question-index.md) | Preserved source audit and searchable question index; defer to the canonical guide for final verdicts |
+| [`docs/final-exam-active-recall-workbook.md`](docs/final-exam-active-recall-workbook.md) | Optional calculations and algorithm traces; not evidence of, or required by, the supplied question bank |
 | `docs/Lab & Assignment/Lab-Student` | Original lab notebooks and lab slide decks |
 | `docs/Lab & Assignment/Assignment-student` | Original assignment notebooks and assignment slide decks |
 | `docs/slides/slides` | Lecture slides by course topic |
-| `docs/1-Reinforcement Learning-An introduction.pdf` | Reference PDF |
+| `docs/1-Reinforcement Learning-An introduction.pdf` | Sutton–Barto reference book used as the page-level fallback when local slides are insufficient |
 
 ---
 

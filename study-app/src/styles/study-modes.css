@@ -1,0 +1,433 @@
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding: 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 7px 20px rgb(35 58 50 / 5%);
+}
+
+.search-field {
+  display: flex;
+  min-width: min(380px, 100%);
+  flex: 1;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0 0.75rem;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.search-field input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.search-field svg {
+  width: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.filter-toggle {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.filter-panel-toggle {
+  display: none;
+  min-height: 44px;
+  padding: 0.5rem 0.8rem;
+  color: var(--forest);
+  background: var(--mint);
+  border: 1px solid var(--forest);
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.filter-toggle.active {
+  background: #fff5ce;
+  border-color: #d6ab2e;
+}
+
+.filter-toggle svg {
+  width: 1.1rem;
+}
+
+.result-count {
+  margin: 1rem 0;
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+}
+
+.question-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.question-row {
+  content-visibility: auto;
+  contain-intrinsic-size: 84px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.question-row-main {
+  display: flex;
+}
+
+.favorite-button {
+  width: 50px;
+  flex: 0 0 50px;
+  color: #9b7921;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.favorite-button svg {
+  width: 1.1rem;
+}
+
+.question-disclosure {
+  display: grid;
+  min-height: 72px;
+  flex: 1;
+  grid-template-columns: 58px minmax(0, 1fr) auto 24px;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.75rem 1rem 0.75rem 0;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.question-id {
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.question-title {
+  font-weight: 650;
+}
+
+.question-disclosure > svg {
+  width: 1rem;
+  transition: transform 160ms ease;
+}
+
+.question-disclosure > svg.rotate {
+  transform: rotate(180deg);
+}
+
+.question-row-details {
+  padding: 0 1.25rem 1.25rem 3.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.compact-options {
+  display: grid;
+  gap: 0.4rem;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.verdict {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.verdict-correct {
+  color: #165d42;
+  background: #dff1e7;
+}
+
+.verdict-acceptable-with-caveat {
+  color: #765a06;
+  background: #fff0b6;
+}
+
+.verdict-incorrect {
+  color: #8b322a;
+  background: #f8d8d3;
+}
+
+.verdict-bank-key-only {
+  color: #4f4674;
+  background: #e6e1f6;
+}
+
+.explanation-panel {
+  padding: 1.1rem;
+  background: #f0eee5;
+  border-radius: 13px;
+}
+
+.explanation-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.evidence-label {
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+}
+
+.answer-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.answer-comparison > div {
+  padding: 0.9rem;
+  background: var(--surface);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+}
+
+.answer-comparison > div + div {
+  border-left-color: var(--forest-2);
+}
+
+.answer-comparison small,
+.answer-comparison strong {
+  display: block;
+}
+
+.answer-comparison small {
+  margin-bottom: 0.35rem;
+  color: var(--ink-soft);
+}
+
+.takeaway {
+  padding: 0.85rem;
+  background: #fff5c9;
+  border-radius: 8px;
+}
+
+.rationale-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.rationale-list > div {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 0.5rem;
+}
+
+.rationale-list strong {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  color: white;
+  background: var(--forest);
+  border-radius: 7px;
+  place-items: center;
+}
+
+.rationale-list p {
+  margin: 0;
+}
+
+.source-caution {
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+
+.study-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.study-toolbar h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.deck-progress {
+  display: grid;
+  grid-template-columns: auto minmax(120px, 1fr);
+  gap: 1rem;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.deck-progress > div,
+.match-progress {
+  height: 7px;
+  background: #dddcd1;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.deck-progress i,
+.match-progress i {
+  display: block;
+  height: 100%;
+  background: var(--forest);
+  border-radius: inherit;
+}
+
+.flashcard {
+  position: relative;
+  display: block;
+  scroll-margin-top: 6.5rem;
+  width: min(900px, 100%);
+  min-height: 570px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  perspective: 1200px;
+}
+
+.flashcard-flip-control {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.flashcard-flip-control:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.flashcard-face {
+  min-height: 570px;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.flashcard-back {
+  display: none;
+}
+
+.flashcard.is-flipped .flashcard-front {
+  display: none;
+}
+
+.flashcard.is-flipped .flashcard-back {
+  display: block;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.flashcard h2 {
+  font-size: clamp(1.55rem, 4vw, 2.6rem);
+}
+
+.flashcard ol {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0;
+  list-style: none;
+}
+
+.flashcard li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.flashcard li strong {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  color: white;
+  background: var(--forest);
+  border-radius: 50%;
+  place-items: center;
+}
+
+.flip-hint {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+}
+
+.flip-hint svg {
+  width: 1rem;
+}
+
+.deck-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.button.favorite.active {
+  color: #705300;
+  background: #fff0a9;
+}
+
+.button.needs-work {
+  color: var(--red);
+  background: #fff1ef;
+}
+
+.keyboard-help {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+}

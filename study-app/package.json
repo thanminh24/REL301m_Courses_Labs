@@ -1,0 +1,53 @@
+{
+  "name": "rel301m-study",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run data:build && npm run data:check && next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "data:sync": "node scripts/sync-source-data.mjs",
+    "data:build": "node scripts/build-question-bank.mjs",
+    "data:check": "node scripts/validate-question-bank.mjs",
+    "data:precheck": "node scripts/validate-question-bank.mjs --allow-unreviewed",
+    "build:github-pages": "NEXT_PUBLIC_BASE_PATH=/rel301m npm run build",
+    "test": "vitest run --exclude 'tests/production/**' --exclude 'tests/e2e/**' --exclude 'tests/zoom/**' --exclude 'tests/github-pages/**'",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:production": "playwright test --config playwright.production.config.ts",
+    "test:zoom": "playwright test --config playwright.zoom.config.ts",
+    "test:github-pages": "playwright test --config playwright.github-pages.config.ts",
+    "verify:boundary": "node scripts/verify-worktree-boundary.mjs",
+    "verify:standalone": "npm run lint && npm run typecheck && npm run test && npm run build && npm run test:e2e && npm run test:production && npm run test:zoom",
+    "verify": "npm run verify:standalone && npm run verify:boundary"
+  },
+  "dependencies": {
+    "lucide-react": "1.26.0",
+    "next": "16.2.11",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.62.0",
+    "@testing-library/jest-dom": "7.0.0",
+    "@testing-library/react": "16.3.2",
+    "@types/node": "22.15.30",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.2.11",
+    "jsdom": "29.1.1",
+    "typescript": "5.9.3",
+    "vitest": "4.1.10"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.23",
+      "sharp": "0.35.3"
+    }
+  }
+}

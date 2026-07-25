@@ -1,0 +1,108 @@
+name: Deploy REL301m Study Studio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "study-app/**"
+      - ".github/workflows/deploy-rel301m.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rel301m-portfolio-publish
+  cancel-in-progress: true
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: study-app
+
+    steps:
+      - name: Check out course repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: study-app/package-lock.json
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Install test browsers
+        run: npx playwright install --with-deps chromium firefox
+
+      - name: Verify complete study application
+        run: npm run verify:standalone
+
+      - name: Build /rel301m export
+        run: npm run build:github-pages
+
+      - name: Smoke-test prefixed export
+        run: npm run test:github-pages
+
+      - name: Add exact-source release marker
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          node --input-type=module -e \
+            'import { writeFileSync } from "node:fs"; writeFileSync("out/release.json", JSON.stringify({ source_sha: process.env.SOURCE_SHA }) + "\n");'
+          touch out/.nojekyll
+
+      - name: Check out portfolio Pages repository
+        uses: actions/checkout@v4
+        with:
+          repository: thanminh24/thanminh24.github.io
+          token: ${{ secrets.PAGES_REPOSITORY_TOKEN }}
+          path: portfolio
+
+      - name: Replace only the /rel301m site
+        run: |
+          rm -rf portfolio/rel301m
+          mkdir -p portfolio/rel301m
+          cp -a out/. portfolio/rel301m/
+          touch portfolio/.nojekyll
+
+      - name: Commit and push portfolio update
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git -C portfolio config user.name "github-actions[bot]"
+          git -C portfolio config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C portfolio add .nojekyll rel301m
+          if git -C portfolio diff --cached --quiet; then
+            echo "Portfolio already contains this exact export."
+          else
+            git -C portfolio commit -m "feat: publish REL301m study studio ${SOURCE_SHA:0:7}"
+            git -C portfolio push origin HEAD:main
+          fi
+
+      - name: Wait for the exact Pages release
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          for attempt in $(seq 1 60); do
+            deployed_sha="$(curl --fail --silent --show-error \
+              "https://thanminh24.github.io/rel301m/release.json?attempt=${attempt}" \
+              | node --input-type=module -e \
+                'let body = ""; process.stdin.on("data", chunk => body += chunk); process.stdin.on("end", () => { try { process.stdout.write(JSON.parse(body).source_sha ?? ""); } catch {} });' \
+              || true)"
+            if [ "$deployed_sha" = "$SOURCE_SHA" ]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Timed out waiting for Pages to serve source $SOURCE_SHA." >&2
+          exit 1
+
+      - name: Smoke-test deployed production site
+        env:
+          PLAYWRIGHT_GITHUB_PAGES_BASE_URL: https://thanminh24.github.io/rel301m/
+        run: npm run test:github-pages

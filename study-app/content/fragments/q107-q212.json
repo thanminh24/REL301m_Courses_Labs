@@ -1,0 +1,1999 @@
+[
+  {
+    "id": "Q107",
+    "explanation": "Specific response cues can narrow stimulus control, whereas varied similar stimuli normally broaden generalization. The bank marks C, \"By providing specific cues for different responses,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Specific response cues can narrow stimulus control, whereas varied similar stimuli normally broaden generalization. For exam recall the unverified bank key is C.",
+    "optionRationales": {
+      "A": "Inconsistent reinforcement can weaken or destabilize responding, but the checked sources do not establish it as the answer to this bank-only item.",
+      "B": "Training with varied stimuli normally promotes broader transfer, although the unavailable answer-bearing source prevents a definitive judgment here.",
+      "C": "The bank associates distinct response cues with reduced generalization and records C for exam purposes; that convention remains externally unverified.",
+      "D": "Withholding reinforcement describes extinction conditions more naturally than controlled discrimination, but this option is not source-adjudicated."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q108",
+    "explanation": "Expected Sarsa forms its next-state target by summing each possible next action's Q-value weighted by the policy probability of choosing that action. The expectation is therefore over actions available at the next state, which replaces Sarsa's single sampled next action with a probability-weighted average.",
+    "keyTakeaway": "Expected Sarsa averages over possible next actions: multiply each Q(s′,a) by π(a|s′), then sum.",
+    "optionRationales": {
+      "A": "Future states are handled by the observed transition to s′ in the one-step update; the inner expectation at that state ranges over actions, not another distribution of successor states.",
+      "B": "The observed reward enters the target as R, but Expected Sarsa does not average alternative rewards in the displayed action-value expectation.",
+      "C": "Possible next actions are exactly the outcomes weighted by π(a|s′), producing the expected next action value Σa π(a|s′)Q(s′,a).",
+      "D": "A state value could equal an action-weighted expectation, but the algorithm explicitly computes that value from next-state action values rather than averaging a set of current state values."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Possible next actions",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q109",
+    "explanation": "Dyna is an integrated reinforcement-learning architecture: it learns directly from real experience, learns an environment model, plans from simulated model experience, and acts. None of the four options states that full purpose; C mentions modeling dynamics but omits Dyna's defining integration of learning and planning, so the supplied key is conceptually incomplete.",
+    "keyTakeaway": "Dyna means learning, modeling, planning, and acting in one loop; bank option C names only the model component.",
+    "optionRationales": {
+      "A": "Developing operating systems is a systems-software objective and has no connection to Dyna's integrated reinforcement-learning and planning loop.",
+      "B": "Designing scalable web servers is a software-engineering task and does not describe Dyna's learning-and-planning loop.",
+      "C": "Modeling dynamics is one component of Dyna, but this choice is too narrow: Dyna also learns directly, plans with simulated experience, and acts.",
+      "D": "Managing database transactions has no role in the Dyna architecture described by Sutton–Barto."
+    },
+    "conceptual": {
+      "kind": "freeform",
+      "acceptedLetters": [],
+      "display": "Dyna integrates direct learning, model learning, planning updates from simulated experience, and acting.",
+      "aliases": [
+        "integrated learning, planning, and acting",
+        "Dyna architecture"
+      ]
+    }
+  },
+  {
+    "id": "Q110",
+    "explanation": "Importance sampling reweights samples drawn from a proposal or behavior distribution so they estimate an expectation under a target distribution. When those distributions are close, importance ratios are less extreme and the estimator usually has lower variance; a larger sample can reduce ordinary sampling error but cannot fully rescue a severely mismatched proposal.",
+    "keyTakeaway": "Close proposal and target distributions keep importance weights stable; more samples reduce noise, but they do not cure extreme variance caused by poor overlap.",
+    "optionRationales": {
+      "A": "A larger sample usually reduces sampling error, but severe proposal–target mismatch can still create huge or unstable importance weights; sample count is not the defining quality factor asked here.",
+      "B": "Closeness gives the proposal good overlap with the target, which keeps importance ratios from becoming extreme and directly controls a major source of estimator variance.",
+      "C": "More iterations merely repeat estimation work; they do not determine whether the sampled distribution covers the target well enough for stable importance weights.",
+      "D": "Convergence order describes an estimator's asymptotic behavior under assumptions. It is a property to analyze, not the distribution-design factor that drives importance-weight stability."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "The closeness of the proposal distribution to the target distribution",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q111",
+    "explanation": "TD can revise an estimate after each transition, which is the plausible sense in which the bank uses real-time feedback. The bank marks A, \"Real-time feedback,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "TD can revise an estimate after each transition, which is the plausible sense in which the bank uses real-time feedback. For exam recall the unverified bank key is A.",
+    "optionRationales": {
+      "A": "The bank uses real-time feedback to describe TD's ability to update after a transition, though the educational phrasing is not reference-verified.",
+      "B": "A delayed response mechanism conflicts with the usual online character of TD, but this bank-only distractor lacks direct adjudicating evidence.",
+      "C": "Limited access to course materials is an access constraint, not an algorithmic TD property; the source set nevertheless does not formally score it.",
+      "D": "Static content delivery concerns instructional media rather than sequential value updates, yet no answer-bearing source was found for this item."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q112",
+    "explanation": "To find the optimal strategy for an agent to maximize cumulative reward is the central answer to the primary objective of reinforcement learning in build mode. An RL agent searches for a policy that maximizes expected cumulative return, not merely immediate reward or training speed.",
+    "keyTakeaway": "An RL agent searches for a policy that maximizes expected cumulative return, not merely immediate reward or training speed.",
+    "optionRationales": {
+      "A": "Minimizing training time is an efficiency concern; it does not define the return-maximization objective of reinforcement learning.",
+      "B": "An optimal strategy maximizes expected cumulative reward, which is the standard long-run objective assigned to the agent.",
+      "C": "Network size is a representation-design choice and can change without altering the agent's reinforcement-learning objective.",
+      "D": "Performance on one isolated task is narrower than maximizing cumulative reward under the task's state-transition dynamics."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To find the optimal strategy for an agent to maximize cumulative reward",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q113",
+    "explanation": "Poor observations, false structural assumptions, and overfitting can each make a learned model disagree with the real process. Perfect real-world alignment would eliminate that discrepancy, so it cannot be a cause of model inaccuracy.",
+    "keyTakeaway": "Perfect real-world alignment would remove model error rather than cause it; poor data, false assumptions, and overfitting can all create inaccuracies.",
+    "optionRationales": {
+      "A": "Poor-quality observations can make a learned model inaccurate through noise, omissions, or systematic measurement error.",
+      "B": "Incorrect structural assumptions create bias when the model family cannot represent the real process.",
+      "C": "Overfitting captures training-specific noise and therefore harms accuracy on new situations.",
+      "D": "Perfect real-world alignment would eliminate the modeled discrepancy, so it cannot be a cause of inaccuracy."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "D"
+      ],
+      "display": "Perfect alignment with real-world scenarios",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q114",
+    "explanation": "As softmax temperature grows, preference differences are flattened and action probabilities approach a uniform distribution. The bank marks C, \"The policy becomes completely random,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "As softmax temperature grows, preference differences are flattened and action probabilities approach a uniform distribution. For exam recall the unverified bank key is C.",
+    "optionRationales": {
+      "A": "Determinism is approached when temperature becomes very small, not when it grows, although this bank-only item lacks direct source adjudication.",
+      "B": "Larger temperature does make the policy more stochastic; the bank chooses the limiting description of complete randomness.",
+      "C": "At infinite temperature all finite preferences become negligible and probabilities approach uniform, which the bank calls completely random.",
+      "D": "Softmax probabilities may still be computed separately in each state, so state independence is a stronger and unverified claim."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q115",
+    "explanation": "Carefully chosen proposal distributions, importance weights, or control variates can reduce the variance of a Monte Carlo estimator. Ordinary importance sampling can itself have high variance, so the bank’s B answer needs this estimator-design caveat.",
+    "keyTakeaway": "Carefully designed importance-sampling or control-variate schemes can reduce Monte Carlo variance, although ordinary importance sampling can itself have high variance.",
+    "optionRationales": {
+      "A": "Gradient descent optimizes parameters and is not itself a Monte Carlo variance-reduction estimator.",
+      "B": "Importance reweighting can serve variance-reduction goals when the proposal and estimator are designed carefully, supporting the qualified bank answer.",
+      "C": "Simple random sampling supplies ordinary Monte Carlo data but does not deliberately reduce its variance.",
+      "D": "Fixed partitioning resembles stratification only under additional design details; the bare phrase does not identify the cited technique."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Variance reduction techniques like importance sampling",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q116",
+    "explanation": "Stochastic environments is the central answer to type of environment Expected Sarsa generally more stable than Q-learning. Expected Sarsa averages across next actions, avoiding the extra randomness of Q-learning's sampled behavior in noisy environments.",
+    "keyTakeaway": "Expected Sarsa averages across next actions, avoiding the extra randomness of Q-learning's sampled behavior in noisy environments.",
+    "optionRationales": {
+      "A": "In deterministic environments the sampled and expected next-action targets may differ little, so stochasticity is not the main advantage there.",
+      "B": "Averaging policy-weighted next-action values can damp action-selection noise in stochastic settings, supporting B without promising universal superiority.",
+      "C": "Full observability concerns access to state information and does not by itself create Expected Sarsa's variance advantage.",
+      "D": "A static environment may simplify learning, but it does not specifically explain the expected backup's stability relative to a max backup."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Stochastic environments",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q117",
+    "explanation": "Hyperbolic discounting makes the implied discount rate change with delay, producing especially steep discounting near the present. The bank marks A, \"Hyperbolic discounting,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Hyperbolic discounting makes the implied discount rate change with delay, producing especially steep discounting near the present. For exam recall the unverified bank key is A.",
+    "optionRationales": {
+      "A": "Hyperbolic discounting changes the effective discount rate with delay and is the bank's label for steep near-term discounting.",
+      "B": "Exponential discounting uses a constant proportional rate across delays, so it does not capture the described time inconsistency.",
+      "C": "Temporal myopia informally means short-sightedness, but it is not the formal bank term selected for this phenomenon.",
+      "D": "Preference reversal can result from hyperbolic discounting; it names an effect rather than the discount function itself."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q118",
+    "explanation": "TD methods adapt quickly to changing environments is the central answer to advantage of Temporal Difference (TD) methods allows them to be applied in online settings wh environment changes over time. Because TD updates after each transition, it can continue revising estimates while the data-generating environment changes.",
+    "keyTakeaway": "Because TD updates after each transition, it can continue revising estimates while the data-generating environment changes.",
+    "optionRationales": {
+      "A": "Requiring a fixed environment would prevent the ongoing adaptation claimed in the stem.",
+      "B": "TD is model-free and does not need a predefined transition model to update from experience.",
+      "C": "Incremental transition-by-transition updates let TD revise estimates as new conditions appear, which supports the qualified answer.",
+      "D": "Restricting TD to offline learning is false to its defining ability to update during interaction."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "TD methods adapt quickly to changing environments.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q119",
+    "explanation": "The symbol Q conventionally denotes the action-value function Q(s,a), whose inputs are a state and an action. It is mathematical notation rather than an acronym with a word expansion; although the bank marks D, no checked answer-bearing source verifies “Q-value” as that expansion.",
+    "keyTakeaway": "The symbol Q conventionally denotes an action-value function Q(s,a); it is notation, not an acronym that expands to “Q-value.” For exam recall the unverified bank key is D.",
+    "optionRationales": {
+      "A": "Quantity is an English word beginning with Q, not the historical expansion of the mathematical action-value symbol.",
+      "B": "Quality is sometimes used informally to explain Q, but no checked source treats it as an acronym expansion.",
+      "C": "Queue has no semantic connection to action values or random tabular planning.",
+      "D": "The bank records Q-value, while the technically safe statement is simply that Q denotes the action-value function Q(s,a)."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": "Q is the conventional symbol for an action-value function Q(s,a); it is not an acronym with a word expansion.",
+      "aliases": [
+        "action-value notation",
+        "Q-function notation"
+      ]
+    }
+  },
+  {
+    "id": "Q120",
+    "explanation": "Parameters is the central answer to component of a parameterized policy typically adjusted during training. Training changes the numerical policy parameters; the definitions of the state space, action space, and rewards belong to the task.",
+    "keyTakeaway": "Training changes the numerical policy parameters; the definitions of the state space, action space, and rewards belong to the task.",
+    "optionRationales": {
+      "A": "The state space is specified by the task and normally remains fixed while the policy is trained.",
+      "B": "The available action space belongs to the environment interface rather than the adjustable policy representation.",
+      "C": "Policy parameters such as weights and biases are precisely the quantities changed by optimization.",
+      "D": "Rewards provide training feedback, but the agent does not normally modify the environment's reward values as policy parameters."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Parameters",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q121",
+    "explanation": "The advantage \\(A(s,a)=Q(s,a)-V(s)\\) compares one action with the policy’s state-level baseline. A positive advantage means that action is better than the policy’s average behavior in that state, giving the actor a useful update signal.",
+    "keyTakeaway": "The advantage A(s,a)=Q(s,a)-V(s) measures how much better an action is than the policy's state-level baseline.",
+    "optionRationales": {
+      "A": "An action-probability distribution is the actor's output, whereas advantage is a value comparison used to train that actor.",
+      "B": "Q(s,a) minus V(s) measures an action's improvement over the policy baseline, which is the defining advantage interpretation.",
+      "C": "Discounted cumulative reward is the return; advantage compares value estimates rather than recomputing the trajectory return.",
+      "D": "The advantage signal can guide policy optimization, but optimizing the policy is an effect rather than its mathematical definition."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To measure the improvement of taking a particular action in a given state over the average action",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q122",
+    "explanation": "Random tabular Q-planning samples previously observed state–action pairs and applies simulated one-step backups through the learned model. This spreads planning computation across model entries, but it neither guarantees equal update counts nor constitutes exploration through new real-environment actions; therefore none of the supplied choices states the mechanism accurately.",
+    "keyTakeaway": "Random Q-planning improves model-entry coverage for simulated backups; it is not a guarantee of equal updates or behavioral exploration.",
+    "optionRationales": {
+      "A": "Random sampling does not ensure perfectly equal update counts; it only gives previously observed model entries a chance to be selected.",
+      "B": "The random choice is among modeled state–action pairs during planning, not among real environment actions, so it does not itself improve behavioral exploration.",
+      "C": "Implementation simplicity is not the learning reason for random backups; the mechanism spreads simulated updates through the learned model.",
+      "D": "Random planning is not by itself a convergence guarantee; convergence still depends on coverage, step sizes, model quality, and standard algorithm conditions."
+    },
+    "conceptual": {
+      "kind": "freeform",
+      "acceptedLetters": [],
+      "display": "Random tabular Q-planning samples previously observed state–action pairs to spread planning updates across the learned model.",
+      "aliases": [
+        "planning coverage",
+        "random model-sample updates"
+      ]
+    }
+  },
+  {
+    "id": "Q123",
+    "explanation": "Coarse coding uses overlapping receptive fields, allowing nearby states to activate some of the same features. A weight update learned at one state therefore transfers to similar states, producing local generalization.",
+    "keyTakeaway": "Overlapping receptive fields let nearby states activate shared features, so learning at one state transfers to similar states.",
+    "optionRationales": {
+      "A": "Coarse coding does not shrink the underlying state space; it changes how states are represented by shared features.",
+      "B": "Resource reduction may occur incidentally, but it is not the representational purpose that defines coarse coding.",
+      "C": "Overlapping features make nearby states share active components, directly producing generalization.",
+      "D": "Exact representation would oppose coarse coding's deliberate sharing and approximation across regions."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "To generalize the state representation by using overlapping features",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q124",
+    "explanation": "It can cause the algorithm to ignore the best-known solutions is the central answer to In Monte-Carlo algorithms, what the potential downside of too much exploration. Excessive exploration spends too many decisions testing alternatives and can forgo the best action currently known.",
+    "keyTakeaway": "Excessive exploration spends too many decisions testing alternatives and can forgo the best action currently known.",
+    "optionRationales": {
+      "A": "Overfitting is not the central cost of action exploration in this Monte Carlo control question.",
+      "B": "Too much exploration repeatedly forgoes the strongest known action, reducing exploitation of current knowledge.",
+      "C": "Suboptimal convergence is not the most direct consequence; persistent exploration primarily sacrifices current reward.",
+      "D": "Extra computation can occur, but the tested dilemma is behavioral opportunity cost rather than runtime alone."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "It can cause the algorithm to ignore the best-known solutions",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q125",
+    "explanation": "The bank treats flexibility as useful for episodic work, but the checked RL sources do not establish this general task-management claim. The bank marks B, \"Flexibility,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "The bank treats flexibility as useful for episodic work, but the checked RL sources do not establish this general task-management claim. For exam recall the unverified bank key is B.",
+    "optionRationales": {
+      "A": "Procrastination delays work and is not the bank's proposed management factor, though the question lacks reference support.",
+      "B": "The bank records flexibility as helpful when an episode's demands change; this remains an exam convention rather than verified RL theory.",
+      "C": "Rigid scheduling is the opposite of the selected flexibility claim, but no answer-bearing course source adjudicates it.",
+      "D": "Micro-management describes excessive control of people, not a standard property of episodic tasks in Sutton–Barto."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q126",
+    "explanation": "SARSA updates the Q-values using the action taken by the policy is the central answer to of the following statements the SARSA algorithm. Sarsa is on-policy because its target uses the next action actually selected by the same behavior policy.",
+    "keyTakeaway": "Sarsa is on-policy because its target uses the next action actually selected by the same behavior policy.",
+    "optionRationales": {
+      "A": "Sarsa is on-policy because its behavior action also appears in the update target.",
+      "B": "Sarsa's convergence depends on exploration and step-size conditions, so optimality is not automatic in every run.",
+      "C": "The sampled next action chosen by the current policy enters the Sarsa target Q(S′,A′), making C correct.",
+      "D": "Sarsa learns directly from transitions and therefore does not require an environment model."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "SARSA updates the Q-values using the action taken by the policy.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q127",
+    "explanation": "A continuing task has no natural terminal episode and is modeled as ongoing interaction. Performance is therefore often expressed with continuing-task objectives such as average reward rather than return from a fixed episode.",
+    "keyTakeaway": "A continuing task has no natural terminal episode and is modeled as ongoing interaction.",
+    "optionRationales": {
+      "A": "Attention frequency is an application detail and does not determine whether interaction terminates.",
+      "B": "A discrete one-time action is too short to characterize an ongoing continuing task.",
+      "C": "Indefinite duration and absence of a natural terminal state define continuing interaction.",
+      "D": "Completion in one session describes an episode, the opposite of the ongoing structure requested."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "They have indefinite or ongoing durations.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q128",
+    "explanation": "Arecursive decomposition of optimization problems is the central answer to of the following the Bellman equation. A Bellman equation recursively expresses a value through immediate reward plus the value of successor situations.",
+    "keyTakeaway": "A Bellman equation recursively expresses a value through immediate reward plus the value of successor situations.",
+    "optionRationales": {
+      "A": "Bellman recursion decomposes value into immediate reward and successor value, making A the closest description despite its broad optimization wording.",
+      "B": "A Bellman equation can become linear under a fixed policy, but “a linear equation solving system” is not its defining concept.",
+      "C": "Linear regression estimates statistical relationships and is unrelated to Bellman's recursive value identity.",
+      "D": "Probabilistic forecasts may appear inside a model, but Bellman equations combine those dynamics with recursive return values."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Arecursive decomposition of optimization problems.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q129",
+    "explanation": "Policy improvement compares action consequences using the current value estimates and makes action selection greedy or greedier. Holding the policy fixed would instead be policy evaluation, so the defining operation is updating the policy.",
+    "keyTakeaway": "Policy improvement makes action selection greedy or greedier with respect to the current value estimates.",
+    "optionRationales": {
+      "A": "Greedifying with respect to current values is the policy-improvement operation.",
+      "B": "Random policy changes need not favor higher-value actions and therefore do not guarantee improvement.",
+      "C": "Holding the policy fixed while estimating its values is policy evaluation, the preceding phase.",
+      "D": "Enumerating every possible policy is unnecessary; local greedy improvement is sufficient for policy iteration."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Updating the policy to be more greedy with respect to the value function",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q130",
+    "explanation": "Clustering states based on feature similarity is the central answer to one approach to aggregating states in continuous state spaces. State aggregation groups continuous states with similar features and learns one shared estimate for each group.",
+    "keyTakeaway": "State aggregation groups continuous states with similar features and learns one shared estimate for each group.",
+    "optionRationales": {
+      "A": "Restricting the problem to discrete states avoids rather than solves aggregation for a continuous space.",
+      "B": "Clustering feature-similar states creates aggregates that can share one learned value estimate.",
+      "C": "Ignoring features removes the information needed to group nearby or behaviorally similar states.",
+      "D": "Random grouping may merge unrelated states and destroys the similarity principle used by effective aggregation."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Clustering states based on feature similarity.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q131",
+    "explanation": "Linear features share parameters across many states, so one TD update changes every state that activates related features. This transfer can improve estimates for unseen states and is the key advantage over independent tabular entries.",
+    "keyTakeaway": "Linear features share parameters across states, allowing TD updates to affect states that have never been visited but activate similar features.",
+    "optionRationales": {
+      "A": "Function approximation generally trades exact tabular representation for scalable generalization, so exactness is not its advantage.",
+      "B": "Shared features let parameter updates transfer to unseen states, directly providing the requested benefit.",
+      "C": "Step sizes and feature choices still require tuning in linear semi-gradient TD.",
+      "D": "Implementation may be more complex than a table; simplicity is not the substantive advantage."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "It can generalize to unseen states through feature representation.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q132",
+    "explanation": "It determines the probability of exploring new actions is the central answer to In the epsilon-greedy policy, what role the parameter epsilon (€) play in balancing exploration and exploitation. In epsilon-greedy action selection, epsilon is the probability assigned to the random exploration branch.",
+    "keyTakeaway": "In epsilon-greedy action selection, epsilon is the probability assigned to the random exploration branch.",
+    "optionRationales": {
+      "A": "The best-known action is selected with the exploitation probability, usually 1−ε plus any tie contribution, not ε alone.",
+      "B": "Learning rate α controls update magnitude and is separate from epsilon's action-selection role.",
+      "C": "Discount factor γ weights future rewards and does not set exploration frequency.",
+      "D": "Epsilon controls the probability of entering the random exploratory branch."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "D"
+      ],
+      "display": "It determines the probability of exploring new actions",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q133",
+    "explanation": "Monte Carlo waits for a complete sampled return before making its ordinary episodic update. TD instead bootstraps after a transition from the next value estimate, which enables online learning before the episode ends.",
+    "keyTakeaway": "Monte Carlo waits for a complete sampled return, while TD bootstraps after a step from the next value estimate.",
+    "optionRationales": {
+      "A": "Monte Carlo uses complete episodic returns, while TD can update immediately from a bootstrapped next estimate.",
+      "B": "Both Monte Carlo and TD can be model-free, so model knowledge does not distinguish them.",
+      "C": "Computational cost varies by implementation and is not the defining methodological distinction.",
+      "D": "Online Monte Carlo variants exist, although ordinary prediction waits for sufficient return information; the absolute claim is too strong."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Monte Carlo methods update estimates based on the entire episode, while TD methods update bas current steps.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q134",
+    "explanation": "Reducing the number of rollouts is the central answer to strategy NOT typically used to maintain exploration in Monte-Carlo Tree Search. Fewer MCTS rollouts reduce search evidence; UCB bonuses and randomized playouts are mechanisms that maintain exploration.",
+    "keyTakeaway": "Fewer MCTS rollouts reduce search evidence; UCB bonuses and randomized playouts are mechanisms that maintain exploration.",
+    "optionRationales": {
+      "A": "A larger UCB exploration constant gives uncertain actions a stronger bonus and therefore maintains exploration.",
+      "B": "Random playouts deliberately sample alternative continuations and contribute exploratory coverage.",
+      "C": "Reducing rollout count supplies less evidence and does nothing to preserve the exploration mechanism.",
+      "D": "Domain heuristics can guide useful branches without inherently eliminating search exploration."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Reducing the number of rollouts",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q135",
+    "explanation": "The policy-gradient theorem rewrites the derivative of expected policy performance as an expectation over visited states and actions. Trajectory samples can estimate that expectation, allowing the policy parameters to be improved without calculating an optimal policy in one step.",
+    "keyTakeaway": "The policy-gradient theorem rewrites the gradient of expected performance as an expectation that can be estimated from trajectories.",
+    "optionRationales": {
+      "A": "The theorem supplies a gradient expression for improving parameters; it does not calculate an optimal policy in one direct step.",
+      "B": "Policy evaluation estimates values under a fixed policy and is not the theorem's primary output.",
+      "C": "The policy-gradient theorem expresses the performance gradient as an estimable expectation, making C correct.",
+      "D": "Selecting the optimal action in every state is a greedy value-based operation, not the theorem's contribution."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Approximating the gradient of a policy's performance",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q136",
+    "explanation": "Thompson Sampling is the central answer to In Monte Carlo control, which exploration method considers uncertainty by sampling from a posterior distribution of action values. Thompson sampling draws from the posterior over action values and acts according to the sampled hypothesis.",
+    "keyTakeaway": "Thompson sampling draws from the posterior over action values and acts according to the sampled hypothesis.",
+    "optionRationales": {
+      "A": "UCB adds an optimism bonus derived from uncertainty but does not sample a value hypothesis from a posterior.",
+      "B": "Epsilon-greedy randomizes with a fixed exploration probability rather than a posterior belief.",
+      "C": "Thompson sampling draws an action-value hypothesis from the posterior and acts greedily for that draw.",
+      "D": "Boltzmann exploration samples from softmax-transformed preferences, not from a posterior over unknown action values."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Thompson Sampling",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q137",
+    "explanation": "A function approximator maps state–action features to estimated Q-values when a table is impractical. Epsilon-greedy compares those estimates, choosing a greedy action most of the time and a random action with probability epsilon.",
+    "keyTakeaway": "With function approximation, epsilon-greedy compares Q estimates produced for the candidate state-action pairs.",
+    "optionRationales": {
+      "A": "The function approximator does not generate epsilon; epsilon is configured by the exploration policy.",
+      "B": "It maps state-action features to estimated Q-values that epsilon-greedy can compare.",
+      "C": "The epsilon-greedy rule itself determines random versus greedy selection, not the approximator.",
+      "D": "Setting epsilon is a hyperparameter decision external to the learned Q function."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "It approximates the Q-values for given states and actions",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q138",
+    "explanation": "To maximize the cumulative reward is the central answer to the goal of an agent in an MDP. The MDP objective is a policy with maximum expected cumulative return from interaction.",
+    "keyTakeaway": "The MDP objective is a policy with maximum expected cumulative return from interaction.",
+    "optionRationales": {
+      "A": "Exploring states can support learning, but exploration is instrumental rather than the MDP objective.",
+      "B": "Expected cumulative reward is the criterion used to compare policies in an MDP.",
+      "C": "Minimizing action count matters only if encoded through rewards and is not a universal objective.",
+      "D": "Frequent transitions have no inherent value unless their rewards improve return."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To maximize the cumulative reward.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q139",
+    "explanation": "A Deep Q-Network uses a neural network to approximate action values across a large state space. This shared representation replaces an impractically large table while retaining Q-learning’s greedy next-value target.",
+    "keyTakeaway": "A DQN uses a neural network to approximate action values when a tabular representation is impractical.",
+    "optionRationales": {
+      "A": "DQN uses a neural network to approximate action values and is a standard large-state-space method.",
+      "B": "Monte Carlo is a return-sampling family; by itself it does not specify the scalable function approximator asked for.",
+      "C": "Policy gradients optimize a policy directly instead of approximating the optimal value function named in the stem.",
+      "D": "TD describes a bootstrapped update family and still needs a representation such as DQN for very large spaces."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Deep Q-Networks (DQN)",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q140",
+    "explanation": "Monte Carlo methods and dynamic programming is the central answer to Temporal Difference (TD) learning combine. TD has Monte Carlo's experience-based learning but uses dynamic programming's bootstrapping from existing estimates.",
+    "keyTakeaway": "TD has Monte Carlo's experience-based learning but uses dynamic programming's bootstrapping from existing estimates.",
+    "optionRationales": {
+      "A": "TD learns from sampled experience like Monte Carlo while bootstrapping from current estimates like dynamic programming.",
+      "B": "Supervised and unsupervised learning are broad paradigms and do not form TD's classic conceptual combination.",
+      "C": "Ordinary versus stochastic gradient descent are optimization variants, not the two sources of TD's update idea.",
+      "D": "Neural networks and decision trees are model classes unrelated to the historical MC–DP synthesis."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Monte Carlo methods and dynamic programming",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q141",
+    "explanation": "The policy term \\(\\pi(a|s)\\) is the probability of selecting action a in state s. In the Bellman expectation equation it weights each action branch, while transition probabilities come separately from the environment model.",
+    "keyTakeaway": "In the Bellman expectation equation, π(a|s) weights each action branch by its probability under the policy.",
+    "optionRationales": {
+      "A": "Immediate rewards come from the reward model and are not chosen by the policy probability.",
+      "B": "π(a|s) is the probability weight assigned to action a when the policy is in state s.",
+      "C": "Transition probabilities belong to the environment model p(s′|s,a), not the policy.",
+      "D": "Discounting is controlled by γ, whereas π weights action branches."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "It specifies the probability of taking action a in state s",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q142",
+    "explanation": "Planning a company retreat is the central answer to of the following an example of an episodic task. Planning a retreat can be modeled from initiation to a definite completion, giving it an episode boundary.",
+    "keyTakeaway": "Planning a retreat can be modeled from initiation to a definite completion, giving it an episode boundary.",
+    "optionRationales": {
+      "A": "Daily email checking naturally continues without a single terminal completion.",
+      "B": "Weekly meetings recur indefinitely and are continuing unless a larger terminal project is specified.",
+      "C": "A retreat-planning process can begin with a goal and terminate when the event plan is completed.",
+      "D": "Hourly traffic monitoring is an ongoing stream rather than a bounded episode."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Planning a company retreat",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q143",
+    "explanation": "Gradient descent computes the loss gradient with respect to the parameters and moves those parameters in the opposite direction. Repeated steps reduce the parameterized function’s prediction loss rather than directly choosing actions or splitting data.",
+    "keyTakeaway": "Gradient descent moves parameters opposite the loss gradient to reduce the parameterized function's prediction error.",
+    "optionRationales": {
+      "A": "Optimal actions are selected using learned values or policy outputs, not determined directly by gradient descent.",
+      "B": "Gradient descent updates parameters in the direction that reduces the loss.",
+      "C": "Increasing action randomness is an exploration-policy choice, not the optimizer's role.",
+      "D": "Train/test splitting is an evaluation protocol and does not describe parameter optimization."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To update the parameters to minimize the loss function",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q144",
+    "explanation": "Episodic task is the central answer to If you're preparing for an exam by studying a little bit each day, what type of task this. Daily exam preparation can form one episode ending at the exam; frequency alone does not distinguish episodic from continuing tasks.",
+    "keyTakeaway": "Daily exam preparation can form one episode ending at the exam; frequency alone does not distinguish episodic from continuing tasks.",
+    "optionRationales": {
+      "A": "When the exam is treated as a terminal boundary, the sequence of daily study sessions forms an episode.",
+      "B": "A continuing interpretation is possible only if no terminal exam boundary is included, which is why the bank answer needs this modeling caveat.",
+      "C": "Project-based is ordinary task-management vocabulary rather than the RL episodic/continuing classification requested.",
+      "D": "Occasional describes frequency and says nothing about whether the interaction has a terminal state."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Episodic task.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q145",
+    "explanation": "Dyna works with a model of the environment's transition and reward dynamics, so “dynamic models” is the intended category. It combines real-experience learning with simulated planning updates generated from that learned model.",
+    "keyTakeaway": "Dyna learns transition-and-reward dynamics and uses that model for simulated planning updates alongside direct learning.",
+    "optionRationales": {
+      "A": "A static model does not represent the changing transition and reward relationships that Dyna learns.",
+      "B": "Dynamic models capture transition-and-reward dynamics used for Dyna's simulated planning updates.",
+      "C": "Predictive is broadly true of many models but is less specific than the bank's dynamics category.",
+      "D": "Relational models emphasize entity relationships rather than the environment dynamics required for Dyna planning."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Dynamic models",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q146",
+    "explanation": "The larger the sample size, the more accurate the results is the central answer to of the following the law of large numbers as it applies to Monte Carlo simulations. Under the law of large numbers, a sample average tends toward its expected value as independent samples accumulate.",
+    "keyTakeaway": "Under the law of large numbers, a sample average tends toward its expected value as independent samples accumulate.",
+    "optionRationales": {
+      "A": "The law of large numbers predicts convergence of the sample mean, not decreasing accuracy with additional data.",
+      "B": "More samples generally bring the empirical average closer to its expected value, supporting the qualified wording in B.",
+      "C": "Sample size affects estimator variability, so claiming no effect contradicts the law.",
+      "D": "Keeping samples always small would prevent the asymptotic averaging benefit described by the theorem."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "The larger the sample size, the more accurate the results",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q147",
+    "explanation": "Current values estimate the long-term consequences of the available actions. Policy improvement uses those comparisons to choose greedier actions and generate a policy expected to perform at least as well.",
+    "keyTakeaway": "Current values rank action consequences, allowing policy improvement to choose greedier actions and form a better policy.",
+    "optionRationales": {
+      "A": "Initializing an action-value function occurs before evaluation and is not how state values improve a policy.",
+      "B": "State values support comparison of action consequences, allowing construction of a greedier policy.",
+      "C": "Expected action rewards contribute to improvement calculations, but C omits successor values and the actual policy-generation step.",
+      "D": "A stopping threshold is a convergence-control device, not the purpose of state values during improvement."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To generate new policies based on the current state values",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q148",
+    "explanation": "Using different greetings in response to different social cues exemplifies stimulus discrimination in the bank's behavioral terminology. The bank marks B, \"Discrimination,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Using different greetings in response to different social cues exemplifies stimulus discrimination in the bank's behavioral terminology. For exam recall the unverified bank key is B.",
+    "optionRationales": {
+      "A": "Generalization would use the same greeting across similar people; the example instead differentiates responses by social cue.",
+      "B": "The bank labels the cue-specific greetings as discrimination, although the checked RL materials do not verify this behavior-analysis item.",
+      "C": "Extinction is weakening after reinforcement stops and does not describe maintaining two distinct greetings.",
+      "D": "Classical conditioning pairs stimuli and responses; the example is more specifically about responding differently to discriminative cues."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q149",
+    "explanation": "Exploration tries uncertain actions to learn their effects and improve future decisions. Exploitation uses current value knowledge to select actions expected to yield high reward, creating the central information-versus-reward trade-off.",
+    "keyTakeaway": "Exploration gathers information by trying uncertain actions; exploitation uses current knowledge to pursue reward.",
+    "optionRationales": {
+      "A": "Trying unfamiliar actions gathers information, while choosing known high-value actions exploits current estimates.",
+      "B": "Dataset search and model predictions belong to supervised-learning workflow, not the RL action-selection dilemma.",
+      "C": "Exploration and exploitation coexist within reinforcement learning rather than belonging to supervised versus unsupervised learning.",
+      "D": "Model complexity has no definitional connection to whether an agent tries or exploits an action."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Exploration involves trying new actions to discover their effects, while exploitation involves using kn actions to maximize reward",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q150",
+    "explanation": "By averaging over all possible actions is the central answer to Expected Sarsa reduce the variance in Q-value updates compared to Q-learning. Expected Sarsa replaces a single next-action value with the policy-weighted average over all available next actions.",
+    "keyTakeaway": "Expected Sarsa replaces a single next-action value with the policy-weighted average over all available next actions.",
+    "optionRationales": {
+      "A": "A fixed learning rate changes update scale but does not remove randomness from the next-action target.",
+      "B": "Averaging all next-action values with policy probabilities reduces variance from sampling a single next action.",
+      "C": "Always taking the maximum is Q-learning's target and can be sensitive to noisy value estimates.",
+      "D": "Ignoring reward would destroy the TD target rather than stabilize it."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "By averaging over all possible actions.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q151",
+    "explanation": "A distribution model supplies probabilities for every possible next state and reward. Planning can therefore compute an expected backup over the full branching distribution, whereas a sample model produces only one sampled outcome per query.",
+    "keyTakeaway": "A distribution model supplies probabilities for every possible next state and reward, enabling an exact expected planning backup.",
+    "optionRationales": {
+      "A": "Distribution models are usually more detailed, not automatically simpler to implement.",
+      "B": "Computing a full expectation can cost more than drawing one model sample, so reduced computation is not guaranteed.",
+      "C": "Knowing all outcome probabilities enables expected backups over the full branching distribution; this is the supported conceptual advantage, not the bank's broad generalization claim.",
+      "D": "Neither model representation guarantees faster convergence to the optimal policy across all problems."
+    },
+    "conceptual": {
+      "kind": "freeform",
+      "acceptedLetters": [],
+      "display": "A distribution model enables expected updates over the full distribution of possible next states and rewards.",
+      "aliases": [
+        "expected update from full transition distribution"
+      ]
+    }
+  },
+  {
+    "id": "Q152",
+    "explanation": "Neither model type is universally more sample-efficient: sample backups are cheaper and noisy, while distribution backups cost more computation and use fuller model information. The bank marks B, \"Sample-based models are generally less sample-efficient than distribution models,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Neither model type is universally more sample-efficient: sample backups are cheaper and noisy, while distribution backups cost more computation and use fuller model information. For exam recall the unverified bank key is B.",
+    "optionRationales": {
+      "A": "Sample backups can be cheaper per update but noisier; that does not establish universal superiority in sample efficiency.",
+      "B": "The supplied claim that sample models are generally less sample-efficient is not supported as a universal ordering.",
+      "C": "Equal efficiency is also unjustified because branching, model accuracy, and computational budget change the trade-off.",
+      "D": "Sample efficiency remains important in reinforcement learning, especially when real transitions are costly."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": "There is no universal sample-efficiency ordering; the trade-off depends on model cost, branching, computation, and accuracy.",
+      "aliases": [
+        "no universal ordering",
+        "problem-dependent trade-off"
+      ]
+    }
+  },
+  {
+    "id": "Q153",
+    "explanation": "State aggregation maps many original states to one shared value entry. Monte Carlo can average complete sampled returns from visits to those states, producing an estimate for each aggregate without enumerating the original continuous space.",
+    "keyTakeaway": "After states are aggregated, Monte Carlo returns can be averaged to estimate the value shared by each aggregate.",
+    "optionRationales": {
+      "A": "Random search does not use sampled returns to estimate the shared value of an aggregate.",
+      "B": "Dynamic programming could evaluate aggregates with a known model, but it is not the sampled model-free method selected here.",
+      "C": "Monte Carlo can average complete returns for all states mapped to the same aggregate.",
+      "D": "Direct enumeration is infeasible in the continuous spaces that motivate aggregation."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Monte Carlo methods.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q154",
+    "explanation": "The updates become more biased is the central answer to happens if the eligibility trace decay rate set too low in Semi-Gradient TD learning. A small trace-decay λ shortens credit assignment and moves the method toward one-step TD, increasing reliance on bootstrapped targets.",
+    "keyTakeaway": "A small trace-decay λ shortens credit assignment and moves the method toward one-step TD, increasing reliance on bootstrapped targets.",
+    "optionRationales": {
+      "A": "Short traces can reduce variance rather than necessarily increase noise sensitivity, so A is not a reliable universal consequence.",
+      "B": "Lower λ increases bootstrapping and can increase bias relative to long-return targets, which is the intended qualified answer.",
+      "C": "Convergence is not automatically lost merely because λ is small; TD(0) corresponds to λ=0.",
+      "D": "Learning-rate stability is governed primarily by α and representation, not directly by trace decay alone."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "The updates become more biased",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q155",
+    "explanation": "A parameterized policy must still decide how much probability to assign to uncertain alternatives versus currently high-return actions. That allocation expresses the exploration–exploitation trade-off; network size and learning rate control different properties.",
+    "keyTakeaway": "Parameterized policies still need a behavior rule that balances informative trials of alternatives with use of high-return actions.",
+    "optionRationales": {
+      "A": "Network size controls representation capacity and is unrelated to the exploration schedule.",
+      "B": "Favoring high-return actions describes exploitation only and omits the need to test alternatives.",
+      "C": "The dilemma is exactly the balance between informative new actions and rewarding known actions.",
+      "D": "Learning rate scales parameter changes and does not set the exploration–exploitation allocation."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "It defines the trade-off between trying new actions and exploiting known actions",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q156",
+    "explanation": "Hyperbolic discounting assigns disproportionately strong preference to near-term rewards as delays approach the present. The bank marks A, \"Hyperbolic discounting,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Hyperbolic discounting assigns disproportionately strong preference to near-term rewards as delays approach the present. For exam recall the unverified bank key is A.",
+    "optionRationales": {
+      "A": "Hyperbolic discounting is the bank's formal label for especially steep discounting near the present.",
+      "B": "Exponential discounting applies a constant proportional rate and is dynamically consistent.",
+      "C": "Temporal myopia is an informal symptom rather than the specified discounting function.",
+      "D": "Preference reversal is a possible consequence of hyperbolic discounting, not its primary name."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q157",
+    "explanation": "In a k-armed bandit, k is the number of actions or slot-machine arms available at each decision. It is unrelated to step count, discount factor, or learning rate, all of which can vary independently.",
+    "keyTakeaway": "In a k-armed bandit, k counts the actions or arms available on every decision.",
+    "optionRationales": {
+      "A": "Step count is usually denoted t and can grow independently of how many arms exist.",
+      "B": "The k in k-armed bandit counts the available actions or slot-machine arms.",
+      "C": "Discount factor γ is not part of the meaning of k.",
+      "D": "Learning rate α controls estimate updates and is separate from the arm count."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "The number of actions (or arms) available.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q158",
+    "explanation": "Itis a sequence of states, actions, and rewards that terminates is the central answer to the key characteristic of an episode in the context of Monte Carlo methods. For episodic Monte Carlo prediction, an episode is a terminating trajectory of states, actions, and rewards.",
+    "keyTakeaway": "For episodic Monte Carlo prediction, an episode is a terminating trajectory of states, actions, and rewards.",
+    "optionRationales": {
+      "A": "A terminating sequence of states, actions, and rewards is the episode whose return Monte Carlo methods evaluate.",
+      "B": "An episode need not contain a fixed number of time steps; termination time can be random.",
+      "C": "Independent trials may generate statistics, but they do not define one RL trajectory.",
+      "D": "A single action lacks the subsequent rewards and terminal boundary required for an episodic return."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Itis a sequence of states, actions, and rewards that terminates.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q159",
+    "explanation": "A parameterized value function is trained by reducing the discrepancy between its prediction and a sampled or bootstrapped value target. The bank says “actual rewards,” but the technically appropriate target is normally a return or value target rather than only the immediate reward.",
+    "keyTakeaway": "A parameterized value function is trained to reduce prediction error between its estimate and a return or other value target, not merely an immediate reward.",
+    "optionRationales": {
+      "A": "Training time is an efficiency metric rather than the value predictor's objective.",
+      "B": "Exploration rate controls data collection and is not the regression target for value parameters.",
+      "C": "The intended answer is prediction-error minimization, although the technically appropriate target is a return or value target rather than merely immediate reward.",
+      "D": "Adding parameters without regard to loss increases capacity but does not train the value function."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Minimizing the loss between predicted and actual rewards",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q160",
+    "explanation": "They may require a large number of episodes to obtain accurate value estimates is the central answer to a potential drawback of Monte Carlo prediction methods. Monte Carlo estimates are sample averages of high-variance returns, so many complete episodes may be needed for precision.",
+    "keyTakeaway": "Monte Carlo estimates are sample averages of high-variance returns, so many complete episodes may be needed for precision.",
+    "optionRationales": {
+      "A": "Monte Carlo prediction is model-free and therefore does not require transition probabilities.",
+      "B": "Stochastic returns are allowed; Monte Carlo is not restricted to deterministic environments.",
+      "C": "High-variance return averages may need many complete episodes before estimates become accurate.",
+      "D": "On-policy Monte Carlo prediction is standard, so the method is not unsuitable for on-policy learning."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "They may require a large number of episodes to obtain accurate value estimates",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q161",
+    "explanation": "A smaller finite-difference step can reduce truncation error, although excessively small steps may amplify floating-point noise. The bank marks A, \"Increases accuracy,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "A smaller finite-difference step can reduce truncation error, although excessively small steps may amplify floating-point noise. For exam recall the unverified bank key is A.",
+    "optionRationales": {
+      "A": "A smaller finite-difference step can reduce truncation error and is the unverified bank rationale for increased accuracy.",
+      "B": "Decreased accuracy is not the bank's selected direction, though round-off can eventually make extremely small steps harmful.",
+      "C": "Step size generally affects the truncation-versus-round-off trade-off, so “no effect” is implausibly absolute.",
+      "D": "Computational time is driven mainly by evaluation count; reducing h alone does not necessarily add evaluations."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q162",
+    "explanation": "The expected value of a state under a given policy is the central answer to In policy evaluation, what the Bellman expectation equation represent. The Bellman expectation equation gives a state's expected return under a fixed policy through reward and successor-state values.",
+    "keyTakeaway": "The Bellman expectation equation gives a state's expected return under a fixed policy through reward and successor-state values.",
+    "optionRationales": {
+      "A": "Expected cumulative reward describes return broadly, while the Bellman equation specifically assigns that expectation to a state.",
+      "B": "Vπ(s) is the expected return from state s under policy π, which the Bellman expectation equation expresses recursively.",
+      "C": "A state-action expectation is Qπ(s,a), not the state-value equation asked for.",
+      "D": "Expected reward after one action omits the policy-weighted recursion over subsequent actions and states."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "The expected value of a state under a given policy",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q163",
+    "explanation": "Generalization occurs when a response learned for one stimulus also appears for sufficiently similar stimuli. The bank marks B, \"The process by which a response spreads from one specific stimulus to other stimuli that resemble original,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Generalization occurs when a response learned for one stimulus also appears for sufficiently similar stimuli. For exam recall the unverified bank key is B.",
+    "optionRationales": {
+      "A": "Distinguishing among stimuli is discrimination, which is the behavioral complement of generalization.",
+      "B": "A learned response spreading to similar stimuli is the bank's definition of generalization.",
+      "C": "Reduced response frequency describes extinction rather than transfer across stimuli.",
+      "D": "Strengthening one behavior through reinforcement concerns acquisition, not stimulus generalization."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q164",
+    "explanation": "To improve the policy by optimizing the expected return is the central answer to the goal of a policy gradient method in reinforcement learning. Policy-gradient methods adjust policy parameters to increase expected return directly.",
+    "keyTakeaway": "Policy-gradient methods adjust policy parameters to increase expected return directly.",
+    "optionRationales": {
+      "A": "Updating a value function is a value-based operation rather than direct policy-gradient optimization.",
+      "B": "Learning environment dynamics belongs to model-based RL, not the policy-gradient objective.",
+      "C": "Policy gradients change policy parameters to increase expected return, making C the defining goal.",
+      "D": "Computing every Q-value is unnecessary for direct policy optimization and misstates the method."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "To improve the policy by optimizing the expected return",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q165",
+    "explanation": "Dynamic programming forms value or action-value backups from known transition and reward probabilities. Q-learning, Sarsa, and Monte Carlo instead learn model-free from sampled transitions or returns, making DP the model-based choice.",
+    "keyTakeaway": "Dynamic programming forms action-value backups from known transition and reward probabilities; the other listed methods are model-free.",
+    "optionRationales": {
+      "A": "Q-learning is model-free and learns action values from sampled transitions.",
+      "B": "Sarsa is also model-free, using the next action selected by its current policy.",
+      "C": "Monte Carlo control estimates values from complete sampled returns without an environment model.",
+      "D": "Dynamic programming uses known transition and reward probabilities to form expected action-value backups."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "D"
+      ],
+      "display": "Dynamic Programming",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q166",
+    "explanation": "The process of estimating the value function for a given policy is the central answer to In Monte Carlo methods, what the term \"policy evaluation\" refer to. Policy evaluation holds π fixed and estimates Vπ or Qπ for the returns generated by that policy.",
+    "keyTakeaway": "Policy evaluation holds π fixed and estimates Vπ or Qπ for the returns generated by that policy.",
+    "optionRationales": {
+      "A": "Finding an optimal policy is control, not evaluation of one fixed policy.",
+      "B": "Changing action selection from current value estimates is the policy-improvement operation.",
+      "C": "Policy evaluation estimates Vπ or Qπ while π remains fixed.",
+      "D": "Selecting a current best action is action choice or improvement, not value estimation."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "The process of estimating the value function for a given policy.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q167",
+    "explanation": "A policy specifies behavior by mapping each state to an action or a probability distribution over actions. Rewards and discounting determine desirability and return, but they do not define this state-to-action mapping.",
+    "keyTakeaway": "A policy is the agent's mapping from states to actions or to probability distributions over actions.",
+    "optionRationales": {
+      "A": "The full state set defines the environment's state space, not the agent's policy.",
+      "B": "A policy maps each state to an action or action-probability distribution.",
+      "C": "Rewards are supplied by the reward function and are not assigned by the policy definition.",
+      "D": "Discount factor γ weights delayed rewards and does not map states to actions."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "The method by which an agent maps states to actions",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q168",
+    "explanation": "Normalizes values into probabilities is the central answer to In Softmax policy parameterization, what the softmax function do. Softmax exponentiates preferences and normalizes them so the resulting nonnegative action probabilities sum to one.",
+    "keyTakeaway": "Softmax exponentiates preferences and normalizes them so the resulting nonnegative action probabilities sum to one.",
+    "optionRationales": {
+      "A": "Merely squashing each value into [0,1] would not ensure the collection sums to one.",
+      "B": "Softmax exponentiates and normalizes preferences into a valid probability distribution.",
+      "C": "Action selection happens after probabilities are computed; softmax itself does not map values to discrete labels.",
+      "D": "Gradients are derivatives used during optimization, not the output of the softmax normalization step."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Normalizes values into probabilities",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q169",
+    "explanation": "Q-learning commonly uses an epsilon-greedy behavior policy: with probability epsilon it explores randomly, and otherwise it selects an action with the largest current Q estimate. This preserves experience from non-greedy actions while the Q-learning target itself remains greedy, which is why plain greedy, fully random, and softmax policies describe different exploration rules.",
+    "keyTakeaway": "Q-learning commonly behaves epsilon-greedily—random with probability ε, greedy otherwise—while its TD target still uses the greedy next-action value.",
+    "optionRationales": {
+      "A": "A purely greedy strategy always exploits a current maximizer and can stop sampling alternatives, so it lacks the explicit epsilon exploration branch.",
+      "B": "Epsilon-greedy mixes random exploration with greedy exploitation using one probability parameter, matching the behavior strategy commonly paired with Q-learning.",
+      "C": "Softmax samples actions according to probabilities derived from their preferences or values; it is an exploration method, but it is not the two-branch epsilon-greedy rule.",
+      "D": "A fully random strategy explores but never deliberately exploits the best current action, whereas epsilon-greedy normally exploits with probability one minus epsilon."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Epsilon-greedy strategy.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q170",
+    "explanation": "Learning rate is the central answer to parameter NOT typically a part of Tile Coding configuration. Tilings, tile widths, and offsets define the tile representation; learning rate belongs to the update algorithm.",
+    "keyTakeaway": "Tilings, tile widths, and offsets define the tile representation; learning rate belongs to the update algorithm.",
+    "optionRationales": {
+      "A": "Number of tilings controls how many overlapping partitions encode each state and is a representation setting.",
+      "B": "Tile width determines receptive-field resolution and belongs to tile-coding configuration.",
+      "C": "Learning rate scales weight updates after features activate; it does not define the tilings themselves.",
+      "D": "Offsets shift overlapping grids and are an essential representation parameter."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Learning rate",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q171",
+    "explanation": "The bank flags sensitivity to initialization for Boltzmann exploration, but the available evidence does not verify that as its unique major drawback. The bank marks D, \"Sensitivity to initial conditions,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "The bank flags sensitivity to initialization for Boltzmann exploration, but the available evidence does not verify that as its unique major drawback. For exam recall the unverified bank key is D.",
+    "optionRationales": {
+      "A": "Softmax action selection is inexpensive for small action sets, but computational cost can grow; the bank does not verify this as the major drawback.",
+      "B": "Temperature can make Boltzmann exploration exploit heavily, yet that behavior is tunable and not uniquely adjudicated here.",
+      "C": "Boltzmann exploration need not have a fixed rate because probabilities change with value gaps and temperature.",
+      "D": "The bank records sensitivity to initial conditions, but no checked answer-bearing source establishes it as the unique major drawback."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q172",
+    "explanation": "Random sampling is the central answer to of the following a key component of Monte Carlo simulations. Monte Carlo simulation estimates quantities from randomly generated samples rather than only closed-form calculation.",
+    "keyTakeaway": "Monte Carlo simulation estimates quantities from randomly generated samples rather than only closed-form calculation.",
+    "optionRationales": {
+      "A": "A deterministic algorithm alone supplies no random sample distribution for Monte Carlo estimation.",
+      "B": "Random sampling generates the empirical outcomes from which Monte Carlo averages are formed.",
+      "C": "Fixed inputs can parameterize a simulation but cannot replace the random draws central to the method.",
+      "D": "Analytical solutions avoid simulation and therefore are not a defining Monte Carlo component."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Random sampling",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q173",
+    "explanation": "A neural policy’s trainable parameters are its weights and biases, which determine how inputs become action probabilities or actions. Input features and output actions are data and decisions, while activation functions are usually fixed design choices.",
+    "keyTakeaway": "A neural policy's trainable parameters are its weights and biases; inputs and output actions are data and decisions, not parameters.",
+    "optionRationales": {
+      "A": "Input features are observations fed into the network, not the trainable policy parameters.",
+      "B": "Output actions are decisions generated by the policy after its parameters process the input.",
+      "C": "Activation functions specify transformations but are usually chosen in advance rather than learned as the policy's main parameters.",
+      "D": "Weights and biases are the adjustable quantities optimized during neural-policy training."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "D"
+      ],
+      "display": "The weights and biases",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q174",
+    "explanation": "The bank says a reward delivered regardless of behavior loses value, but this behavioral claim is not established by the checked RL evidence. The bank marks B, \"It decreases,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "The bank says a reward delivered regardless of behavior loses value, but this behavioral claim is not established by the checked RL evidence. For exam recall the unverified bank key is B.",
+    "optionRationales": {
+      "A": "An increase would imply noncontingent delivery strengthens reward value, which the bank does not claim or verify.",
+      "B": "The bank selects decreased value under noncontingent delivery, but this behavioral statement is not established by the checked RL sources.",
+      "C": "Unchanged value is a plausible competing interpretation because numerical RL rewards are designer-specified, underscoring the item's uncertainty.",
+      "D": "Unpredictability concerns variability, while the stem says the reward is delivered consistently regardless of behavior."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q175",
+    "explanation": "The gradient points toward the steepest local increase of a differentiable objective. Gradient descent moves in the negative-gradient direction, repeatedly seeking a local minimum rather than merely calculating a derivative once.",
+    "keyTakeaway": "Gradient descent follows the negative gradient to seek a local minimum of an objective function.",
+    "optionRationales": {
+      "A": "Following the positive gradient seeks a maximum, the opposite of ordinary gradient descent.",
+      "B": "Moving against the gradient seeks a local minimum of the objective.",
+      "C": "Computing a derivative supplies the direction but is only one step inside the minimization procedure.",
+      "D": "Architecture search chooses model structure and is distinct from optimizing fixed-architecture parameters."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To find the minimum of a function",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q176",
+    "explanation": "Using historical data to approximate state transitions and rewards is the central answer to a common method for building a model in reinforcement learning. A learned RL model can fit transition and reward predictions from recorded experience tuples.",
+    "keyTakeaway": "A learned RL model can fit transition and reward predictions from recorded experience tuples.",
+    "optionRationales": {
+      "A": "Generic labeled supervised learning is not sufficient unless labels specifically encode next states and rewards from transitions.",
+      "B": "Unsupervised learning may discover structure but does not directly define an RL dynamics-and-reward model.",
+      "C": "Historical experience tuples can train predictors of the next state and reward for each state-action pair.",
+      "D": "Clustering can compress experience, but by itself it does not produce transition and reward predictions."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Using historical data to approximate state transitions and rewards",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q177",
+    "explanation": "An action-independent baseline has zero expected contribution to the score-function gradient, so it can reduce variance without changing the expected policy gradient. Standard variance-reduction methods are likewise not inherently bias sources; finite samples primarily introduce estimation variance, making both A and C defensible for this NOT question.",
+    "keyTakeaway": "An action-independent baseline and standard variance-reduction methods need not bias the expected policy gradient; finite samples mainly create estimation variance.",
+    "optionRationales": {
+      "A": "Variance-reduction techniques are not inherently bias sources, so A is a valid response to the NOT question.",
+      "B": "Finite samples create estimator noise and can interact with approximations, but they primarily affect variance rather than defining an unbiasedness guarantee.",
+      "C": "An action-independent baseline leaves the expected score-function gradient unchanged, making C another valid NOT response.",
+      "D": "Exploration choices alter the sampled state-action distribution and can affect practical gradient estimates, so D is not as safely excluded."
+    },
+    "conceptual": {
+      "kind": "multiple",
+      "acceptedLetters": [
+        "A",
+        "C"
+      ],
+      "display": "Both variance-reduction methods and an action-independent baseline are not inherently sources of policy-gradient bias.",
+      "aliases": [
+        "A and C",
+        "variance reduction and action-independent baselines"
+      ]
+    }
+  },
+  {
+    "id": "Q178",
+    "explanation": "To ensure the algorithm samples a wide range of possibilities is the central answer to the primary goal of using exploration in Monte-Carlo algorithms. Exploration broadens coverage of actions and outcomes so Monte Carlo control can evaluate more than the current favorite.",
+    "keyTakeaway": "Exploration broadens coverage of actions and outcomes so Monte Carlo control can evaluate more than the current favorite.",
+    "optionRationales": {
+      "A": "Exploration can increase rather than minimize computational and interaction cost.",
+      "B": "Finding a good policy is the overall control goal; exploration's immediate role is information and coverage.",
+      "C": "Overfitting is a supervised-learning framing and is not the main Monte Carlo exploration purpose.",
+      "D": "Sampling broadly gives actions and outcomes enough coverage to support reliable return estimates and improvement."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "D"
+      ],
+      "display": "To ensure the algorithm samples a wide range of possibilities",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q179",
+    "explanation": "More aggregates preserve finer value distinctions but require more memory, computation, and data. Fewer aggregates are cheaper and generalize more broadly, yet they merge dissimilar states and can introduce approximation error.",
+    "keyTakeaway": "More aggregates preserve detail but cost memory and data, while fewer aggregates are efficient but introduce approximation error.",
+    "optionRationales": {
+      "A": "Aggregates need not have equal geometric size; their useful boundaries depend on value variation and visitation.",
+      "B": "Choosing aggregate count trades fine detail and lower approximation bias against memory, computation, and data demands.",
+      "C": "Aggregates deliberately contain multiple states, so uniqueness of every state representation would defeat aggregation.",
+      "D": "No one fixed count works across all problems because dynamics and value-function smoothness differ."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Balancing between the level of detail and computational efficiency.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q180",
+    "explanation": "Return is the central answer to In Monte Carlo methods, what the term for the total accumulated reward obtained from a state. The return Gt is the accumulated, usually discounted, sequence of rewards from time t onward.",
+    "keyTakeaway": "The return Gt is the accumulated, usually discounted, sequence of rewards from time t onward.",
+    "optionRationales": {
+      "A": "Immediate reward is only the first term in the sequence accumulated after a state.",
+      "B": "Discounted reward can describe one discounted component, whereas the return sums the full future sequence.",
+      "C": "Return is the standard name for the accumulated, usually discounted, reward sequence from a time step onward.",
+      "D": "Cumulative penalty restricts outcomes to costs and is not the general RL return term."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Return",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q181",
+    "explanation": "Off-policy learning separates the behavior policy that generated experience from the target policy being evaluated or improved. It can therefore learn from actions that the current target policy would not necessarily choose.",
+    "keyTakeaway": "Off-policy learning uses experience generated by a behavior policy to learn about a potentially different target policy.",
+    "optionRationales": {
+      "A": "Using only stored past experience does not by itself distinguish on-policy from off-policy learning.",
+      "B": "Updating from executed actions is common to both on-policy and off-policy algorithms.",
+      "C": "Off-policy learning evaluates or improves a target policy using data that may come from another behavior policy.",
+      "D": "Learning only from the current policy's dictated actions is the on-policy restriction."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "It learns from actions that are not necessarily taken by the current policy.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q182",
+    "explanation": "Temporal Difference Learning is computationally less expensive is the central answer to of the following an advantage of Temporal Difference Learning over Monte Carlo methods for Evaluation. TD can update online without waiting for episode termination, often reducing per-update delay and storage relative to Monte Carlo evaluation.",
+    "keyTakeaway": "TD can update online without waiting for episode termination, often reducing per-update delay and storage relative to Monte Carlo evaluation.",
+    "optionRationales": {
+      "A": "TD can update before termination and often needs less return storage, supporting the qualified computational advantage.",
+      "B": "Bootstrapping introduces bias, so TD estimates are not generally unbiased relative to Monte Carlo returns.",
+      "C": "Control still requires adequate action coverage; TD does not remove the need for exploration.",
+      "D": "Convergence requires assumptions about sampling, step sizes, and representation, so it is not guaranteed unconditionally."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Temporal Difference Learning is computationally less expensive.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q183",
+    "explanation": "The learning rate α multiplies the TD error before it is added to the current Q estimate. It therefore sets the step size of each action-value correction, while γ discounts future value and ε controls exploratory behavior.",
+    "keyTakeaway": "The learning rate α scales the TD correction applied to the current Q estimate.",
+    "optionRationales": {
+      "A": "Discount factor γ, not learning rate α, determines how strongly future rewards enter the target.",
+      "B": "Exploration probability is controlled by epsilon or another behavior-policy parameter.",
+      "C": "Alpha multiplies the TD error and therefore sets the size of each Q-value correction.",
+      "D": "Random-action probability is controlled by epsilon and does not describe the learning-rate role."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "It adjusts the step size for updating the action values",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q184",
+    "explanation": "Temporal-difference learning is a reinforcement-learning method for prediction and control from sequential experience. It updates estimates after individual transitions using an observed reward plus a bootstrapped estimate of what follows, without waiting for episode termination.",
+    "keyTakeaway": "TD is an RL prediction and control mechanism that learns from rewards plus bootstrapped estimates after transitions.",
+    "optionRationales": {
+      "A": "Supervised learning relies on external target labels rather than TD's reward-plus-bootstrap target.",
+      "B": "Unsupervised learning seeks unlabeled structure and does not describe TD value updates.",
+      "C": "TD is used for reinforcement-learning prediction and control from sequential transitions.",
+      "D": "Because reinforcement learning is listed, “none of the above” is false."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Reinforcement learning",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q185",
+    "explanation": "Planning applies an environment model to evaluate hypothetical future transitions, rewards, and action outcomes. These simulated consequences support value updates without requiring every candidate transition to occur in the real environment.",
+    "keyTakeaway": "Planning evaluates hypothetical future outcomes by applying a model rather than requiring each transition to occur in the real environment.",
+    "optionRationales": {
+      "A": "Executing a fixed strategy is acting, not evaluating imagined model outcomes.",
+      "B": "Learning only from immediate real rewards omits the model-based lookahead central to planning.",
+      "C": "Planning applies a model to assess possible future transitions, rewards, and action outcomes.",
+      "D": "Random real-environment exploration gathers experience but does not itself perform model-based planning."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Using a model to evaluate future actions and outcomes",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q186",
+    "explanation": "To calculate the value function is the central answer to the Bellman equation used for in reinforcement learning. Bellman equations define value functions recursively from immediate rewards and successor values.",
+    "keyTakeaway": "Bellman equations define value functions recursively from immediate rewards and successor values.",
+    "optionRationales": {
+      "A": "A Bellman optimality equation can support deriving an optimal policy, but its immediate mathematical object is a recursively defined value function.",
+      "B": "Expected reward alone omits successor values and therefore is not the full Bellman quantity.",
+      "C": "Transition probabilities are inputs to a Bellman expectation, not what the equation primarily calculates.",
+      "D": "Bellman equations relate and compute state or action values from reward and successor values."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "D"
+      ],
+      "display": "To calculate the value function",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q187",
+    "explanation": "TD(0) applies a sampled one-step Bellman backup to the current state-value estimate after each transition. It moves V(S) toward R+γV(S′) by a correction scaled by the learning rate instead of waiting for a complete return.",
+    "keyTakeaway": "TD(0) moves V(S) toward the one-step Bellman target R+γV(S′).",
+    "optionRationales": {
+      "A": "Differentiating the reward function is unrelated to the tabular TD(0) value update.",
+      "B": "The sampled Bellman target R+γV(S′) provides the direction for changing V(S).",
+      "C": "Averaging raw rewards omits both discounting and bootstrapping from the successor estimate.",
+      "D": "Randomly assigning new values ignores the structured TD error and would not implement learning."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "By using the Bellman equation.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q188",
+    "explanation": "Both first-visit and every-visit Monte Carlo estimate a state's value by averaging complete returns observed after visits to that state. First-visit MC keeps only the first occurrence of the state in each episode, whereas every-visit MC includes every occurrence, so the stem as written supports both A and B even though the exam bank records A.",
+    "keyTakeaway": "Both MC variants average complete returns: first-visit counts once per episode; every-visit counts every occurrence.",
+    "optionRationales": {
+      "A": "First-visit MC averages one return per episode for a state: the return following that state's first visit. It therefore satisfies the wording.",
+      "B": "Every-visit MC averages returns from every visit to the state, including repeated visits within an episode. It also satisfies the wording.",
+      "C": "TD learning updates from a bootstrapped target such as R plus gamma times the next estimate; it does not wait to average complete Monte Carlo returns.",
+      "D": "Q-learning is an off-policy TD control method using a greedy next-action value, not a Monte Carlo state-return averaging rule."
+    },
+    "conceptual": {
+      "kind": "multiple",
+      "acceptedLetters": [
+        "A",
+        "B"
+      ],
+      "display": "Both first-visit and every-visit Monte Carlo average observed returns; they differ in which visits within an episode count.",
+      "aliases": [
+        "A and B",
+        "first-visit and every-visit MC"
+      ]
+    }
+  },
+  {
+    "id": "Q189",
+    "explanation": "Policy evaluation holds action probabilities fixed and computes or updates the value function induced by that policy. Policy improvement occurs afterward, using those values to change action selection.",
+    "keyTakeaway": "The evaluation phase holds the policy fixed and updates its value function before the improvement phase changes action selection.",
+    "optionRationales": {
+      "A": "Policy evaluation measures the current policy by updating its value estimates while holding action probabilities fixed.",
+      "B": "Policy improvement uses those values to change action selection after evaluation.",
+      "C": "Initialization supplies starting values or a starting policy and does not assess current performance.",
+      "D": "Policy iteration names the whole alternating process rather than the specific evaluation phase."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "Policy Evaluation",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q190",
+    "explanation": "Calling every four-legged animal “dog” transfers one learned label to similar stimuli, which the bank classifies as generalization. The bank marks C, \"Achild calls all four-legged animals \"dog\",\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Calling every four-legged animal “dog” transfers one learned label to similar stimuli, which the bank classifies as generalization. For exam recall the unverified bank key is C.",
+    "optionRationales": {
+      "A": "Responding only to one exact bell shows narrow discrimination, not spread across similar stimuli.",
+      "B": "Raising a hand only in one classroom is stimulus-specific responding rather than generalization.",
+      "C": "Calling many similar four-legged animals “dog” transfers one learned label across stimuli, matching the bank's generalization example.",
+      "D": "Telling real from fake smiles is discrimination between cues, the opposite process."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q191",
+    "explanation": "Interstellar distances overwhelm the speeds of present spacecraft, making human travel times impractically long. The bank marks B, \"The distances are too great for current spacecraft speeds,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Interstellar distances overwhelm the speeds of present spacecraft, making human travel times impractically long. For exam recall the unverified bank key is B.",
+    "optionRationales": {
+      "A": "Stellar motion is not the primary barrier because spacecraft can target predicted positions; the enormous distance dominates travel time.",
+      "B": "Present propulsion speeds make interstellar distances require impractically long human mission durations.",
+      "C": "Astronaut interest does not solve the physical constraints of distance, life support, and time.",
+      "D": "Weather is a planetary-atmosphere concept and does not describe stars as a route-planning obstacle."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q192",
+    "explanation": "It reduces the variance of gradient estimates is the central answer to the advantage of using a baseline in policy gradient methods. Subtracting an action-independent baseline leaves the expected policy gradient unchanged while reducing sampling variance.",
+    "keyTakeaway": "Subtracting an action-independent baseline leaves the expected policy gradient unchanged while reducing sampling variance.",
+    "optionRationales": {
+      "A": "A suitable baseline reduces variance without changing the expected policy gradient.",
+      "B": "Learning rate is a separately chosen optimizer hyperparameter and is not increased by baseline subtraction.",
+      "C": "A baseline improves estimator quality but cannot guarantee global optimal-policy convergence.",
+      "D": "Action selection still comes from the policy distribution; the baseline changes the learning signal, not the sampling rule."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "It reduces the variance of gradient estimates",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q193",
+    "explanation": "A policy-gradient objective measures expected cumulative return under the parameterized policy. Gradient ascent changes the parameters toward policies with greater expected return; variance reduction and regularization are supporting techniques rather than the core objective.",
+    "keyTakeaway": "A policy-gradient objective assigns higher value to parameters that produce greater expected cumulative return.",
+    "optionRationales": {
+      "A": "Variance reduction is an estimator-design goal, not the fundamental performance objective.",
+      "B": "The objective assigns higher value to policy parameters with greater expected cumulative reward.",
+      "C": "Regularization may be added to an objective, but it is not the central return-maximization role.",
+      "D": "Exploration is usually encouraged rather than categorically penalized and is not the definition of the objective."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To maximize the expected cumulative reward",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q194",
+    "explanation": "MCMC constructs correlated samples from a target distribution and is commonly used when high-dimensional integrals are difficult to evaluate directly. The bank marks A, \"Markov Chain Monte Carlo (MCMC),\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "MCMC constructs correlated samples from a target distribution and is commonly used when high-dimensional integrals are difficult to evaluate directly. For exam recall the unverified bank key is A.",
+    "optionRationales": {
+      "A": "MCMC targets difficult distributions through a Markov chain and is widely used for high-dimensional integration.",
+      "B": "Simple random sampling can suffer severe inefficiency in high dimensions when the important region is small.",
+      "C": "Stratification can reduce variance but becomes difficult as the number of dimensions and strata explodes.",
+      "D": "Bootstrap sampling estimates sampling uncertainty from observed data rather than serving as the standard high-dimensional integration method."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q195",
+    "explanation": "Sarsa chooses the next action \\(A'\\) from the same current policy that generated the present action A. Its bootstrap target therefore evaluates the behavior actually being followed, which makes the update on-policy.",
+    "keyTakeaway": "Sarsa chooses A′ from the same current policy that generated A, making its update on-policy.",
+    "optionRationales": {
+      "A": "Purely greedy selection would remove the exploration behavior that the current Sarsa policy may include.",
+      "B": "A fixed unrelated policy would make the update off-policy rather than Sarsa's standard on-policy form.",
+      "C": "The next action A′ is sampled from the same current behavior policy that produced A.",
+      "D": "Policy-independent random choice would not preserve the on-policy Sarsa target unless randomness were explicitly part of that policy."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "The same policy used to generate the current action A",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q196",
+    "explanation": "It addresses the need to explore new actions and exploit known rewarding actions is the central answer to of the following the exploration-exploitation trade-off in Q-learning. The trade-off allocates behavior between trying uncertain actions and using actions already estimated to be rewarding.",
+    "keyTakeaway": "The trade-off allocates behavior between trying uncertain actions and using actions already estimated to be rewarding.",
+    "optionRationales": {
+      "A": "Always choosing the current maximizer describes pure exploitation and omits the exploratory side of the dilemma.",
+      "B": "The trade-off balances trials of uncertain actions against use of actions already estimated to yield reward.",
+      "C": "Always exploring discards exploitation and therefore does not represent a balance.",
+      "D": "Minimizing Q-values contradicts their interpretation as expected returns and is unrelated to exploration allocation."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "It addresses the need to explore new actions and exploit known rewarding actions",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q197",
+    "explanation": "The reward in a Q-learning transition is produced by the action actually executed by the behavior or exploration strategy. The update is off-policy because its bootstrap term separately maximizes over next actions for the greedy target policy.",
+    "keyTakeaway": "The reward in a Q-learning transition comes from the action actually executed by the behavior or exploration strategy; the target separately maximizes over next actions.",
+    "optionRationales": {
+      "A": "If the current policy means the target greedy policy, it need not be the behavior that produced the observed reward in off-policy Q-learning.",
+      "B": "The reward comes from the action actually executed by the exploration or behavior strategy.",
+      "C": "A different policy may define the learning target, but it did not physically generate this transition's reward.",
+      "D": "The maximizing next action supplies the bootstrapped next-value term and is not necessarily the action whose execution produced R."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "The action chosen by an exploration strategy.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q198",
+    "explanation": "To maximize the total reward over time is the central answer to the main objective of the Q-learning algorithm. Q-learning seeks Q*, whose greedy policy maximizes expected cumulative reward over time.",
+    "keyTakeaway": "Q-learning seeks Q*, whose greedy policy maximizes expected cumulative reward over time.",
+    "optionRationales": {
+      "A": "Q-learning raises good action values rather than minimizing all state-action values.",
+      "B": "Learning Q* supports a policy that maximizes expected cumulative reward over time.",
+      "C": "Exploration may decay, but minimizing its rate is not the algorithm's objective.",
+      "D": "Taking many actions has no value unless their consequences improve expected return."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To maximize the total reward over time",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q199",
+    "explanation": "Sarsa is named for the five elements in its sampled update tuple: State, Action, Reward, next State, and next Action. The final next action is essential because its Q-value supplies the on-policy bootstrap target.",
+    "keyTakeaway": "Sarsa is named for the five elements in its update tuple: State, Action, Reward, next State, next Action.",
+    "optionRationales": {
+      "A": "State-Action-Reward-State-Action lists the exact sampled transition and next action used in the update.",
+      "B": "Replacing the next state with “Sequence” removes the state variable required by the TD target.",
+      "C": "Return is not the R in the acronym; R is the one-step reward observed on the transition.",
+      "D": "Adaptation is not the fifth element; the final A is the next action A′."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "State-Action-Reward-State-Action",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q200",
+    "explanation": "It weights the Q-values of possible actions to compute the expected value is the central answer to role the policy's probability distribution play in Expected Sarsa. Expected Sarsa multiplies each next-action Q-value by π(a|s′) and sums, producing a policy-weighted expectation.",
+    "keyTakeaway": "Expected Sarsa multiplies each next-action Q-value by π(a|s′) and sums, producing a policy-weighted expectation.",
+    "optionRationales": {
+      "A": "Expected Sarsa computes an average target rather than using the distribution only to sample one next action.",
+      "B": "The policy probabilities weight each possible next-action Q-value in the expectation.",
+      "C": "Taking a maximum would reproduce Q-learning's greedy target and discard non-greedy policy probabilities.",
+      "D": "The distribution includes every action's weight, not just a special greedy-action selection step."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "It weights the Q-values of possible actions to compute the expected value",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q201",
+    "explanation": "A Gaussian policy represents continuous actions with a probability density whose mean and spread are controlled by policy parameters. Sampling from that density produces real-valued actions while retaining a differentiable stochastic policy.",
+    "keyTakeaway": "A Gaussian policy represents a continuous action through a density whose mean and spread are controlled by policy parameters.",
+    "optionRationales": {
+      "A": "Discretization is possible but sacrifices the direct continuous-action representation that policy gradients can provide.",
+      "B": "Actor–critic is an architecture that can use many policy distributions; it does not itself specify how continuous actions are represented.",
+      "C": "A Gaussian density lets the policy sample real-valued actions using learned mean and spread parameters.",
+      "D": "Changing the reward function does not create a continuous policy distribution."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "By applying Gaussian policy distributions",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q202",
+    "explanation": "The optimal state-value function is \\(v_*(s)=\\max_\\pi\\mathbb E_\\pi[G_t\\mid S_t=s]\\): the greatest expected return attainable from a state over all policies. Option A is the nearest bank choice, but “maximum reward” is imprecise because value concerns an expectation over complete future returns, not the largest single reward outcome.",
+    "keyTakeaway": "Optimal value maximizes expected return over policies; it does not select the largest one-step reward.",
+    "optionRationales": {
+      "A": "This is the nearest choice, but “maximum reward” is imprecise: optimal value is the maximum expected return over policies, not the best single reward outcome.",
+      "B": "Optimality maximizes rather than minimizes expected return, so a minimum reward cannot define the optimal value function.",
+      "C": "An average under one unspecified behavior does not express optimization over policies; v-star selects the largest policy-conditioned expected return.",
+      "D": "Returns may be discounted, but this option omits both expectation and maximization over policies, which are essential to the optimal value definition."
+    },
+    "conceptual": {
+      "kind": "freeform",
+      "acceptedLetters": [],
+      "display": "The optimal state value is the maximum expected return over policies, not the largest single reward.",
+      "aliases": [
+        "maximum expected return",
+        "v-star"
+      ]
+    }
+  },
+  {
+    "id": "Q203",
+    "explanation": "Softmax temperature controls how sharply action preferences translate into probabilities: lower is greedier, higher is flatter. The bank marks B, \"Temperature parameter,\" but no answer-bearing passage in the checked sources verifies that selection, so retain it only as an exam convention.",
+    "keyTakeaway": "Softmax temperature controls how sharply action preferences translate into probabilities: lower is greedier, higher is flatter. For exam recall the unverified bank key is B.",
+    "optionRationales": {
+      "A": "Learning rate changes parameter-update magnitude rather than the softness of action probabilities.",
+      "B": "Temperature scales preferences before softmax, controlling whether probabilities are flat or sharply greedy.",
+      "C": "Discount factor weights future reward and has no direct role in softmax exploration.",
+      "D": "Advantage supplies a learning signal but is not the temperature controlling the action distribution's entropy."
+    },
+    "conceptual": {
+      "kind": "manual-review",
+      "acceptedLetters": [],
+      "display": null,
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q204",
+    "explanation": "It guides the policy towards actions that lead to higher rewards is the central answer to role the reward signal play in adjusting the parameters of a policy. Reward-weighted policy updates increase the probability of actions associated with better returns and decrease it for worse outcomes.",
+    "keyTakeaway": "Reward-weighted policy updates increase the probability of actions associated with better returns and decrease it for worse outcomes.",
+    "optionRationales": {
+      "A": "Network size is an architectural choice and is not determined by individual reward observations.",
+      "B": "Returns weight policy updates so actions associated with better outcomes become more likely.",
+      "C": "The environment's state space is part of the task definition and is not created by reward feedback.",
+      "D": "Exploration rate may be separately configured; reward primarily supplies direction for improving policy parameters."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "It guides the policy towards actions that lead to higher rewards",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q205",
+    "explanation": "Each Q-learning Bellman update corrects the current action-value estimate toward immediate reward plus the best discounted next value. Repeating those corrections across experience progressively approximates the optimal action-value fixed point rather than maximizing only immediate reward.",
+    "keyTakeaway": "Repeated Bellman updates progressively refine Q toward the optimal action-value fixed point.",
+    "optionRationales": {
+      "A": "Maximizing one immediate reward would ignore delayed consequences encoded in the Bellman target.",
+      "B": "Iterative backups refine Q toward the optimal action-value fixed point as more transitions are observed.",
+      "C": "A fixed policy conflicts with Q-learning control, which improves toward a greedy target policy.",
+      "D": "Overfitting terminology does not explain why recursive value estimates require repeated corrections."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To approximate the optimal action-value function over time",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q206",
+    "explanation": "To estimate the future rewards from a given state is the central answer to the primary purpose of the state value function in reinforcement learning. Vπ(s) estimates the expected future return from state s when the agent follows policy π.",
+    "keyTakeaway": "Vπ(s) estimates the expected future return from state s when the agent follows policy π.",
+    "optionRationales": {
+      "A": "Action probabilities are supplied by a policy π(a|s), not by the state-value function.",
+      "B": "Vπ(s) predicts the expected future return from s under policy π.",
+      "C": "Visit history may be stored for algorithms, but it is not what V represents.",
+      "D": "Prediction-error minimization is a training procedure; the represented quantity remains expected return."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "To estimate the future rewards from a given state",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q207",
+    "explanation": "The learning rate multiplies the gradient and therefore sets the distance moved in parameter space on each update. It is distinct from batch size, training duration, and the observed rate of performance improvement.",
+    "keyTakeaway": "The learning rate is the multiplier that sets the size of each parameter update.",
+    "optionRationales": {
+      "A": "Data processed per iteration is batch size, a separate optimization setting.",
+      "B": "Learning rate is the multiplier controlling the size of each parameter step.",
+      "C": "Total iteration count controls training duration and is not the per-update step size.",
+      "D": "Observed performance improvement is an outcome and does not define the learning-rate parameter."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "The step size used to update the parameters",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q208",
+    "explanation": "The probability of selecting a random arm is the central answer to the epsilon (€) represent in the ¢-greedy algorithm. Epsilon gives the probability of taking the random exploratory branch in epsilon-greedy selection.",
+    "keyTakeaway": "Epsilon gives the probability of taking the random exploratory branch in epsilon-greedy selection.",
+    "optionRationales": {
+      "A": "Epsilon is the probability of using the random arm-selection branch.",
+      "B": "Reward from the best arm is an observed outcome, not the exploration parameter.",
+      "C": "Learning rate controls estimate updates and is conventionally denoted α.",
+      "D": "The number of available arms is denoted by k, not by epsilon."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "A"
+      ],
+      "display": "The probability of selecting a random arm.",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q209",
+    "explanation": "Stochastic gradient descent estimates an update from individual or small sampled transitions rather than a full fixed dataset. That sampled, incremental operation fits streaming reinforcement-learning data and avoids enumerating a large continuous state space.",
+    "keyTakeaway": "SGD updates from individual or small sampled transitions, making it practical for streaming RL data and large state spaces.",
+    "optionRationales": {
+      "A": "Mini-batch updates are also common, so the item is not universally unique; B names the broader stochastic-update idea intended by the bank.",
+      "B": "SGD can update from sampled transitions without processing the entire continuous state space at once.",
+      "C": "Batch gradient descent requires a full fixed dataset gradient and is awkward for streaming RL interaction.",
+      "D": "Because stochastic sampled updates are applicable, “none of the above” is incorrect."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "B"
+      ],
+      "display": "Stochastic gradient descent (SGD)",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q210",
+    "explanation": "To minimize the temporal difference error is the central answer to In the Q-learning algorithm, what the main goal when updating the Q-values. A Q-learning update reduces the discrepancy between the current Q estimate and its reward-plus-max-next-value TD target.",
+    "keyTakeaway": "A Q-learning update reduces the discrepancy between the current Q estimate and its reward-plus-max-next-value TD target.",
+    "optionRationales": {
+      "A": "Maximizing immediate reward omits the bootstrapped future value in the Q-learning target.",
+      "B": "Shortest paths arise only when the reward design encodes path length and are not the generic update goal.",
+      "C": "Each update moves Q toward its Bellman target, thereby reducing the sampled temporal-difference error.",
+      "D": "Exploration rate belongs to the behavior strategy and is not maximized by the Q-value correction."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "To minimize the temporal difference error",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q211",
+    "explanation": "The Q-function \\(Q(s,a)\\) represents action value because it conditions expected return on both a state and a selected action. By contrast, \\(V(s)\\) omits the action and \\(\\pi(a|s)\\) gives a selection probability rather than return.",
+    "keyTakeaway": "The Q-function Q(s,a) represents action value because it conditions expected return on both state and action.",
+    "optionRationales": {
+      "A": "R denotes immediate reward or a reward function, not expected return conditioned on an action.",
+      "B": "V(s) is state value and does not condition on a particular action.",
+      "C": "The policy π(a|s) gives action probabilities rather than expected action-return estimates.",
+      "D": "Q(s,a) is the conventional function for expected return from a state-action pair."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "D"
+      ],
+      "display": "Q-function (Q)",
+      "aliases": []
+    }
+  },
+  {
+    "id": "Q212",
+    "explanation": "Policy-based policy is the central answer to type of policy directly associates actions with states without using a value function. A policy-based method parameterizes the state-to-action distribution directly instead of deriving actions from a learned value function.",
+    "keyTakeaway": "A policy-based method parameterizes the state-to-action distribution directly instead of deriving actions from a learned value function.",
+    "optionRationales": {
+      "A": "A value-based policy derives actions from learned values, so it does use a value function.",
+      "B": "A model-based policy is categorized by its use of predicted dynamics, not by direct state-to-action parameterization.",
+      "C": "A policy-based method directly maps states to actions or action probabilities without requiring a value function.",
+      "D": "Q-learning learns Q values and takes greedy actions from them, making it value-based rather than direct policy-based."
+    },
+    "conceptual": {
+      "kind": "single",
+      "acceptedLetters": [
+        "C"
+      ],
+      "display": "Policy-based policy",
+      "aliases": []
+    }
+  }
+]

@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-25",
+  "repositoryRoot": ".",
+  "allowedTaskPaths": [
+    "README.md",
+    ".github/",
+    ".openai/",
+    "study-app/",
+    "plans/quiz-app-ux-concept.md",
+    "plans/260725-rel301m-quiz-study-app/",
+    "docs/rel301m-exam-study-consolidated.md",
+    "docs/journals/2026-07-25-rel301m-quiz-study-app.md"
+  ],
+  "entries": [
+    {
+      "status": "??",
+      "path": "docs/final-exam-active-recall-workbook.md",
+      "kind": "file",
+      "sha256": "8811fe803aaf26529c99f056c5358ff60ce753fc7c8eaf1f59f02643d301189c"
+    },
+    {
+      "status": "??",
+      "path": "docs/final-exam-revision-question-index.md",
+      "kind": "file",
+      "sha256": "6785c46d70cdef02562c82c31760a5f49796078771511b2d7ded5e612566704f"
+    },
+    {
+      "status": "??",
+      "path": "docs/journals/2026-07-24-rel301m-question-first-learning-guide.md",
+      "kind": "file",
+      "sha256": "03cab801496773b1b3b6093902f4897614ace973ff29627c4fe35030000c0333"
+    },
+    {
+      "status": "??",
+      "path": "docs/rel301m-complete-learning-guide.md",
+      "kind": "file",
+      "sha256": "a7dda59d0b7517c0e3de412949517bb846910d3493a0f91b4816fd17a0a38bdc"
+    },
+    {
+      "status": "??",
+      "path": "Group Assignment/docs/d3-study-notes-and-open-items.md",
+      "kind": "file",
+      "sha256": "d90dba116d4f00abb9dbf2ebfba61bf6844c485730e62a2063342732433d00d6"
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/experiments/d3_common.py",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/experiments/direction3_regime_roundrobin_results.json",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/experiments/direction3_regime_roundrobin.py",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/experiments/direction3_reward_shaping_d1opponent.ipynb",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/experiments/results/direction3_regimes_vs_d1.json",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/experiments/results/direction3_shaping_vs_d1.json",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/plans/260705-1901-presentation-deck-and-d3-deepdive/phase-01-extract-figures.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/plans/260705-1901-presentation-deck-and-d3-deepdive/phase-02-finish-presentation-spec.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/plans/260705-1901-presentation-deck-and-d3-deepdive/phase-03-d3-deep-dive-study-notes.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/plans/260705-1901-presentation-deck-and-d3-deepdive/phase-04-d2-summary-and-talking-points.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/plans/260705-1901-presentation-deck-and-d3-deepdive/plan.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/plans/260705-1901-presentation-deck-and-d3-deepdive/reports/pm-2026-07-05-presentation-deck-sync.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/direction1_selfplay_league_cell7_out0.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/direction1_selfplay_league_cell8_out0.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/direction1_selfplay_league_cell8_out1.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/direction2_representation_cell7_out0.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/direction3_reward_shaping_cell11_out0.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/direction3_reward_shaping_cell8_out0.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/direction4_pomdp_elo_cell10_out0.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/direction4_pomdp_elo_cell14_out0.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/slide01_problem_framing_frame.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/slide03_baseline_frame.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/figures/summary_cell2_out0.png",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/friend-study-notes-d3-deep-dive-d2-summary.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/friend-talking-points-d3-d2.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/match_demo_vs_random.avi",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Group Assignment/presentation-material/presentation-structure.md",
+      "kind": "missing",
+      "sha256": null
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/phase-01-source-contract-and-extraction-preflight.md",
+      "kind": "file",
+      "sha256": "2437e23c64b84a7fa448f00fd1cec835805d196b0137a4b1c0e6f175465ae0c0"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/phase-02-extract-and-audit-lecture-decks.md",
+      "kind": "file",
+      "sha256": "c769a993749f5224bcf0ef262160e48b3a7d1dbfdf628feb1601e571107609ce"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/phase-03-author-course-1-chapters.md",
+      "kind": "file",
+      "sha256": "48bacede3f48e13bac073a5fe855fde3f2c4c916c5f476bef3d8550ee2763a35"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/phase-04-author-course-2-chapters.md",
+      "kind": "file",
+      "sha256": "8944b40f853cd444a0495f9dd0d8e5b84ef6a8f902917b94e9985a434dd2fde4"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/phase-05-author-course-3-and-framing-chapters.md",
+      "kind": "file",
+      "sha256": "ec240987017f6e1f1eb1416ce787e24ef3f62ecb02f22112b5c9a4605d387416"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/phase-06-integrate-and-correct-question-bank.md",
+      "kind": "file",
+      "sha256": "b64778b9876dbf4da916113e8da571ee5901d8f506c4e5d151da86e95391bd91"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/phase-07-learning-system-cross-check-and-release.md",
+      "kind": "file",
+      "sha256": "f7bb4105928d77a906bf34c489b97a3c4c9252900d2359cd4c0f888a194852fc"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/phase-08-promote-complete-tested-bank-to-canon.md",
+      "kind": "file",
+      "sha256": "117471e61317aacb058b0a86c502d279aab62d9b395840ea78a29aeedad673da"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/plan.md",
+      "kind": "file",
+      "sha256": "f617e6f3fbba0756cb7449b6b7cc0e389ad411028615ae311b8082f868467be3"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/reports/pm-2026-07-24-1106-learning-guide-completion.md",
+      "kind": "file",
+      "sha256": "e468af5c8ac1c9ad9224ea9cf49e7056619a2dc4014a4cfc1ce342931ebb3db3"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/reports/pm-2026-07-24-1655-full-317-canon-completion.md",
+      "kind": "file",
+      "sha256": "2df2d1870e0f5e28b493aaf74b685e2db33365dcfd69fa734926d4e9b6f7240d"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/reports/reviewer-2026-07-24-full-317-canon.md",
+      "kind": "file",
+      "sha256": "408cf1eea16f05202c33f3a1bcd9b1c18e469729786a56e0d4c129b4ec8f6323"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/reports/reviewer-2026-07-24-learning-guide.md",
+      "kind": "file",
+      "sha256": "c5125d4d7a37f4e67676d8da6e0b442876f42abf407c364d053428f8e9224a5d"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/reports/tester-2026-07-24-full-317-canon.md",
+      "kind": "file",
+      "sha256": "575ab1f616fa3ec5428b46b46fc1191f2e0b1aea5f2f232bcc1b0a944b478920"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/reports/tester-2026-07-24-learning-guide.md",
+      "kind": "file",
+      "sha256": "99350d2152169e84558ba55f288c8e2838bdb7917d810cbde74698175eee4bf0"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/course-1-evidence-map.md",
+      "kind": "file",
+      "sha256": "a16ede08b58af346011d18d0a2164ddef1a6d46dbdfc885eea80fdb6ac671a86"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/course-1-learning-fragment.md",
+      "kind": "file",
+      "sha256": "f9c84df53ffda360f3b1dbf2f5e3fc3009fd2c875a3f02e60dfe6ab312e3a805"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/course-2-evidence-map.md",
+      "kind": "file",
+      "sha256": "d4daaa8fb00656833e63abc9e782dee38bf08f4c722cf33fb1e16adc4e37eebc"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/course-2-learning-fragment.md",
+      "kind": "file",
+      "sha256": "2b1e378a2dd197bff9198ba781ecc2eef3b38ee4be23520f53bde82f0f81895f"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/course-3-evidence-map.md",
+      "kind": "file",
+      "sha256": "ae54718f563351c0198af9de3aa89063cac2ec00176db9f84035e3238db3abfe"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/course-3-learning-fragment.md",
+      "kind": "file",
+      "sha256": "309e025cb3f8a2db569f66e25ca766b3571bc22bf373855c11963f393ed0d786"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/course-framing-fragment.md",
+      "kind": "file",
+      "sha256": "981319ed150767eb746d7e9ca883b672b6c82db8d510b936e8ed4dab429bf5f9"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/coursera-public-source-inventory.md",
+      "kind": "file",
+      "sha256": "51a16ddf704abe09f312ed13a526ca5814ed0a8687b22eb4b0944a8d713aa899"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/learning-manual-architecture.md",
+      "kind": "file",
+      "sha256": "f07cbdb610e608d9c279275d66a2697290e60249802db15b83a51f7fd5c710b0"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/manual-front-and-cross-course.md",
+      "kind": "file",
+      "sha256": "2db3eb30b61e1d20e8a59e19215c81099760699a84fa0cdb7bd458556932bb9d"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/primary-evidence-map.json",
+      "kind": "file",
+      "sha256": "d521a7ab841a577b9ea7bf76260c497ecb23988182d4e7b9d097b1d891f8b276"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/question-adjudications.json",
+      "kind": "file",
+      "sha256": "5c6446143cc64e6b7aa66ae9f64c13f470ab7421ad3a9bb1c101f59c8f88f2e7"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/question-demand-matrix.md",
+      "kind": "file",
+      "sha256": "bd6c81bf491ba5f538682be53dd55e1b52d47eba12b9ad4471c54ce16bdf3455"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/question-first-depth-opinion.md",
+      "kind": "file",
+      "sha256": "5a183e69b1bb0f511682ee033d80251ccc93834722114118ef202bae874b5c6a"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/question-first-execution-decision.md",
+      "kind": "file",
+      "sha256": "aa72f497bb31ade913c27bdd211aa398ff1af1706a8389574b440f9e342b446b"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/question-first-pilot-20.md",
+      "kind": "file",
+      "sha256": "bf8ae5a2e56db7593e9727c5b6496f7a92f244d7ec2f9ac914067d4ebd219877"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/question-first-plan-critique.md",
+      "kind": "file",
+      "sha256": "92d33593d09fca3bd0d4448f5bbdbfcde0d22c72e8f7ea30d1d5d8becd19dd4d"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/question-records.json",
+      "kind": "file",
+      "sha256": "b343611eb9e2e2c3c2c3c9f03289ae4435903e686eca4255483e3795de604bd8"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/question-to-slide-mapping-opinion.md",
+      "kind": "file",
+      "sha256": "3598e6a39ce5442e44fd976a2fa618690eb5727175ac9262a594d4983ab6e1e0"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/source-inventory.md",
+      "kind": "file",
+      "sha256": "901548196bc549d0c56d693c3739f848005fa360821fef204561eae2f7defa8f"
+    },
+    {
+      "status": "??",
+      "path": "plans/260724-0949-rel301m-learning-materials/research/supplemental-evidence-map.json",
+      "kind": "file",
+      "sha256": "25d073d0af955c424faeae46e3e6260bee4dab090a305b8715d79c29e47d1ee7"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/phase-01-foundation-and-data.md",
+      "kind": "file",
+      "sha256": "39930482516b5f35eabf80d22026e4aef80642640c78c23af0450659705804f8"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/phase-02-shell-and-design-system.md",
+      "kind": "file",
+      "sha256": "8b81d00d4c3ea44a1f6527f1286a30a32a791c722ae87aa1c893e863e3976f5d"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/phase-03-library-progress-and-persistence.md",
+      "kind": "file",
+      "sha256": "6d42eb62a5a5b6384fde1ef109f8584c42ada96cb9cb496c498b10c972ef146e"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/phase-04-flashcards.md",
+      "kind": "file",
+      "sha256": "fb9f37651e75f6dad9de73efb34d04f359e9e980928038a854772da5d9cd9920"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/phase-05-adaptive-learn.md",
+      "kind": "file",
+      "sha256": "a4f178cb3e459f701c14100bbac0783e7df5976dc7e6fec83568151fbd6e99f7"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/phase-06-test-mode.md",
+      "kind": "file",
+      "sha256": "ed4a5d4a61bf0afd19e600837b476983a585ac42662469793ae0dbf3cb445183"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/phase-07-verification-and-hardening.md",
+      "kind": "file",
+      "sha256": "befe6f2a6c4c0eb2df6bab7f39116083847cb1c0f2c3f3818d748b8db7aa6175"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/phase-08-deployment.md",
+      "kind": "file",
+      "sha256": "b6324fa49448cfa222e1476733455048c8c3c8b431072f0b679a6b0e1916899b"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/plan.md",
+      "kind": "file",
+      "sha256": "4850425559d79fc8b6148d1956b297855732aefcef2af1ac2f5de864f1ce56ad"
+    },
+    {
+      "status": "??",
+      "path": "plans/260725-rel301m-quiz-study-app/reports/plan-review-2026-07-25.md",
+      "kind": "file",
+      "sha256": "6b575c2606472dd72b600b8570cf5be94ddba80bcac2d274e3f437e769bdf711"
+    },
+    {
+      "status": "??",
+      "path": "plans/quiz-app-ux-concept.md",
+      "kind": "file",
+      "sha256": "9bcd31fb3228fea56e0d2d87568b8bbe52e8598610784c3f81f5b032c2e11d01"
+    },
+    {
+      "status": " M",
+      "path": "README.md",
+      "kind": "file",
+      "sha256": "86471e7615676a42c9774ecf78d3eb08ac4ec2042a34572fa6e9e17a77612c60"
+    },
+    {
+      "status": "??",
+      "path": "scripts/build-rel301m-adjudications.py",
+      "kind": "file",
+      "sha256": "142b32b9a367281169b6feefbc5c687d6b45f69322fe3beebd6ffe03ad267d53"
+    },
+    {
+      "status": "??",
+      "path": "scripts/build-rel301m-learning-guide.py",
+      "kind": "file",
+      "sha256": "88858f46a6b3bec5030757107e79f48c06d242071955e094a067c563e3404973"
+    },
+    {
+      "status": "??",
+      "path": "scripts/build-rel301m-primary-evidence-map.py",
+      "kind": "file",
+      "sha256": "c2dd593a9b52b3bd8ee1a395bd355e98c4ce79dd3dc40b8e05d72cd3a91f7afc"
+    },
+    {
+      "status": "??",
+      "path": "scripts/promote-rel301m-tested-bank-to-canon.py",
+      "kind": "file",
+      "sha256": "66d8de2e6f7f99af178df42d89ce9808e1b8f4d944554c9204518fa1f43c3e2c"
+    },
+    {
+      "status": "??",
+      "path": "scripts/rel301m_guide_common.py",
+      "kind": "file",
+      "sha256": "ae4cf62e5e751f3c01095e68a7f9ff574bda7eb9beaa36ef9cc167e75844f7b4"
+    },
+    {
+      "status": "??",
+      "path": "scripts/rel301m_guide_questions.py",
+      "kind": "file",
+      "sha256": "384d524fc49e8c1f9ac95c91d0c264967005e8b664a6983bb8841d86fa66d628"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validate-rel301m-learning-guide.py",
+      "kind": "file",
+      "sha256": "2170a50d7c587d783055301c5e870fa04c575b0955d374d93674e28f24fa3803"
+    },
+    {
+      "status": "??",
+      "path": "study-app/scripts/capture-worktree-baseline.mjs",
+      "kind": "file",
+      "sha256": "51ddf22e6bc9182293c98faa3f3702d3325c261b6dd94087dfdd1bac64ea3f72"
+    }
+  ]
+}
