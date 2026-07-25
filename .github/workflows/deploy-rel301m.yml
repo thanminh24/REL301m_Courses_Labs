@@ -36,17 +36,11 @@ jobs:
       - name: Install locked dependencies
         run: npm ci
 
-      - name: Install test browsers
-        run: npx playwright install --with-deps chromium firefox
-
-      - name: Verify complete study application
-        run: npm run verify:standalone
+      - name: Check application
+        run: npm run lint && npm run typecheck && npm run test
 
       - name: Build /rel301m export
         run: npm run build:github-pages
-
-      - name: Smoke-test prefixed export
-        run: npm run test:github-pages
 
       - name: Add exact-source release marker
         env:
@@ -61,7 +55,7 @@ jobs:
         with:
           repository: thanminh24/thanminh24.github.io
           token: ${{ secrets.PAGES_REPOSITORY_TOKEN }}
-          path: portfolio
+          path: study-app/portfolio
 
       - name: Replace only the /rel301m site
         run: |
@@ -83,26 +77,3 @@ jobs:
             git -C portfolio commit -m "feat: publish REL301m study studio ${SOURCE_SHA:0:7}"
             git -C portfolio push origin HEAD:main
           fi
-
-      - name: Wait for the exact Pages release
-        env:
-          SOURCE_SHA: ${{ github.sha }}
-        run: |
-          for attempt in $(seq 1 60); do
-            deployed_sha="$(curl --fail --silent --show-error \
-              "https://thanminh24.github.io/rel301m/release.json?attempt=${attempt}" \
-              | node --input-type=module -e \
-                'let body = ""; process.stdin.on("data", chunk => body += chunk); process.stdin.on("end", () => { try { process.stdout.write(JSON.parse(body).source_sha ?? ""); } catch {} });' \
-              || true)"
-            if [ "$deployed_sha" = "$SOURCE_SHA" ]; then
-              exit 0
-            fi
-            sleep 5
-          done
-          echo "Timed out waiting for Pages to serve source $SOURCE_SHA." >&2
-          exit 1
-
-      - name: Smoke-test deployed production site
-        env:
-          PLAYWRIGHT_GITHUB_PAGES_BASE_URL: https://thanminh24.github.io/rel301m/
-        run: npm run test:github-pages

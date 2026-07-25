@@ -655,7 +655,7 @@
       "normalized_concept": "coarse/tile coding and generalization",
       "depth": "D3",
       "confidence": "HIGH",
-      "caution": "Backpropagation is widely used to train neural function approximators in RL, including DQN, so it is not a method 'not typically used' in RL.",
+      "caution": "Backpropagation is used inside deep RL, but unlike Q-learning, Sarsa, and DDPG it is not itself classified as an RL algorithm.",
       "source_locator": {
         "title": "Reinforcement Learning: An Introduction (2nd ed.)",
         "path": "1-Reinforcement Learning-An introduction.pdf",
@@ -668,9 +668,9 @@
         ],
         "section": "Ch. 9, §9.7; Ch. 16, §16.5"
       },
-      "reference_answer": "None of the options: Q-learning, Sarsa, DDPG, and backpropagation are all used in RL, though backpropagation is an optimizer rather than an RL algorithm.",
-      "recommended_verdict": "incorrect",
-      "supplied_answer_support": "contradicted"
+      "reference_answer": "C — Backpropagation",
+      "recommended_verdict": "acceptable-with-caveat",
+      "supplied_answer_support": "supported"
     },
     "Q049": {
       "primary_source_type": "lecture",

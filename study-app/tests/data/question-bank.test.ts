@@ -24,8 +24,8 @@ describe("canonical question bank", () => {
   it("preserves audited verdict and evidence totals", () => {
     expect(bank.counts.verdicts).toEqual({
       correct: 149,
-      incorrect: 32,
-      "acceptable-with-caveat": 98,
+      incorrect: 31,
+      "acceptable-with-caveat": 99,
       "bank-key-only": 38,
     });
     expect(bank.counts.evidence).toEqual({

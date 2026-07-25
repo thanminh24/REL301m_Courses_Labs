@@ -8,15 +8,18 @@ questions.
 - Question Bank: searchable/filterable library with all A–D choices.
 - Flashcards: flip, shuffle, favorite, and mark mastery.
 - Match: timed six-pair exam-recall rounds.
-- Adaptive Learn: prioritizes weak questions and explains every choice.
+- Adaptive Learn: one best-answer choice; correct moves on automatically and
+  wrong reveals a concise explanation.
 - Practice Test: configurable course, length, and timer with separate bank and
   conceptual scores.
 - Progress: local mastery, accuracy, weak-topic view, daily goal, and JSON
   backup/restore.
 
-The app never silently replaces the school question bank. Every record stores
-the supplied exam answer separately from the evidence-backed conceptual answer.
-Items without answer-bearing reference support are visibly labeled bank-only.
+For question answering, the school slides are the first authority, followed by
+Sutton–Barto and the official Coursera Reinforcement Learning Specialization
+material. When wording is imperfect, the app teaches the best available A–D
+choice expected by the course; evidence notes may retain useful nuance outside
+the streamlined Learn flow.
 
 ## Run locally
 
@@ -42,19 +45,16 @@ answer anomalies, 317 content-QA rows, substantive explanations, meaningful
 takeaways, and distinct option rationales. Playwright runs the critical flows
 on desktop Chromium, mobile Chromium, and Firefox, including axe, actual 200%
 zoom, production-service-worker, and `/rel301m` base-path checks.
-`verify` additionally checks the parent course worktree boundary. GitHub Actions
-runs `verify:standalone` because the historical dirty-worktree baseline is a
-local development safeguard rather than a clean-checkout release gate.
+`verify` runs the complete standalone release gate.
 
 ## Deploy to GitHub Pages
 
 The source lives under `study-app/` in
 `thanminh24/REL301m_Courses_Labs`. The repository workflow at
-`../.github/workflows/deploy-rel301m.yml` verifies the complete application,
-builds with `NEXT_PUBLIC_BASE_PATH=/rel301m`, smoke-tests navigation and offline
-deep links, and replaces only the `rel301m/` directory in the existing
-`thanminh24/thanminh24.github.io` portfolio repository. It then waits for the
-exact source SHA and repeats the browser smoke test against:
+`../.github/workflows/deploy-rel301m.yml` checks the application, builds with
+`NEXT_PUBLIC_BASE_PATH=/rel301m`, and replaces only the `rel301m/` directory in
+the existing `thanminh24/thanminh24.github.io` portfolio repository. That
+repository owns the Pages deployment for:
 
 `https://thanminh24.github.io/rel301m/`
 
@@ -66,10 +66,9 @@ GitHub Pages requires the prefixed `npm run build:github-pages` artifact.
 
 ## Data provenance
 
-Immutable authority snapshots live in `src/data/source/`. Run
-`npm run data:sync` only from the parent course repository when those
-authoritative research files intentionally change, then run
-`npm run data:build`. The generated runtime bank strips local filesystem paths.
+Versioned authority snapshots live in `src/data/source/`. Update those snapshots
+deliberately, refresh their hashes, then run `npm run data:build`. The generated
+runtime bank strips local filesystem paths.
 
 Progress stays in browser `localStorage`; there are no accounts, analytics,
 server sync, or third-party trackers.

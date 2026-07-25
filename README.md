@@ -32,9 +32,14 @@
 ## Exam Canon and Evidence
 
 All Q001–Q317 appeared in tests, so all **317 questions are canonical exam material**.
-Canonical means examinable; it does not mean every supplied answer is verified by a reference.
-The complete guide keeps the supplied test-bank answer visible while marking the evidence tier
-and any conceptual correction.
+Canonical means examinable. For multiple-choice practice, the app uses the **best
+available answer among A–D**, following the school material rather than demanding
+that every option be universally worded.
+
+Source priority is: **school lecture slides**, **Sutton–Barto**, then the official
+**Coursera Reinforcement Learning Specialization** material on which the course is
+based. The bank key remains the exam fallback when the available references do not
+uniquely settle an item.
 
 | Primary evidence tier | Questions | Status |
 |---|---:|---|
@@ -90,8 +95,7 @@ jupyter lab "Assignment 1"
 
 ### Quiz-style study app
 
-The offline-capable study app contains all 317 canonical questions with
-separate school-bank and conceptual grading:
+The offline-capable study app contains all 317 canonical questions:
 
 **Live site:** [https://thanminh24.github.io/rel301m/](https://thanminh24.github.io/rel301m/)
 
@@ -101,8 +105,10 @@ npm ci
 npm run dev
 ```
 
-Its core modes are Question Bank, Flashcards, Match, adaptive Learn,
-configurable Test, and local Progress. Run the complete release gate with
+Learn presents one best-answer choice at a time: a correct response advances
+immediately; a wrong response reveals the answer and short rationale. Its other
+modes are Question Bank, Flashcards, Match, configurable Test, and local
+Progress. Run the complete release gate with
 `npm run verify`; see
 [`study-app/docs/quizlet-parity-matrix.md`](study-app/docs/quizlet-parity-matrix.md)
 for the implemented product boundary.

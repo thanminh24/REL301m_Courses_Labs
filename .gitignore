@@ -10,3 +10,10 @@ Thumbs.db
 # Group Assignment (merged from Group Assignment/.gitignore)
 Group Assignment/**/artifacts/
 Group Assignment/**/demo/
+
+# Local agent and planning artifacts
+/.agents/
+/.codex/
+/.claude/
+/plans/
+/scripts/

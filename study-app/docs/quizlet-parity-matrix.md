@@ -8,7 +8,7 @@ the app does not use Quizlet branding, code, data, or services.
 |---|---|---|
 | Searchable set/library | Implemented | Searches all Q001–Q317 across stems, options, topics, concepts, explanations, and rationales; supports course, topic, verdict, evidence, mastery, favorite, and sort controls. |
 | Flashcards | Implemented | Stable saved order, exact resume, filters, flip, favorite, deterministic shuffle, swipe, keyboard controls, Again/Hard/Good/Easy requeue, and separate session reset. |
-| Learn | Implemented | Deterministic adaptive rounds, immediate dual bank/concept feedback, safe curated typed recall after prior exposure, retry/requeue, “I don’t know,” resume, and reset. |
+| Learn | Implemented | Deterministic adaptive best-answer rounds: correct responses advance immediately; wrong responses reveal a concise explanation and requeue once. Includes resume and reset. |
 | Test | Implemented | Up to all 317, filters, MCQ or curated written/self-review, timed mode, instant/end feedback, autosave, navigator, flags, unanswered confirmation, dual scores, review, resume, and reset. |
 | Match | Implemented | Timed/untimed six-pair rounds with resume and reset; only unambiguous reference-supported pairs are eligible. |
 | Progress | Implemented | Local favorites, attempts, two-session mastery, difficult queue, topic/course summaries, recent sessions, daily goal, export/import, retry, and confirmed reset. |
@@ -28,4 +28,3 @@ the app does not use Quizlet branding, code, data, or services.
 - The app never fabricates true/false propositions or accepts approximate typed
   matches. Typed grading uses only curated exact aliases; unsafe items remain
   multiple-choice or manual review.
-

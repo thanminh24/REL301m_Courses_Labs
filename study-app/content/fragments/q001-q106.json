@@ -861,18 +861,18 @@
   },
   {
     "id": "Q048",
-    "explanation": "Q-learning and Sarsa are standard temporal-difference control algorithms, while DDPG is an actor–critic algorithm for continuous control. Backpropagation is also used throughout deep RL to compute parameter gradients, although it is an optimizer mechanism rather than a standalone RL algorithm. Consequently, none of A–D satisfies the requested condition.",
-    "keyTakeaway": "All four listed choices appear in RL practice—backpropagation is an optimizer rather than a standalone RL algorithm—so no option satisfies ‘not used.’",
+    "explanation": "Choose C. Q-learning, Sarsa, and DDPG are reinforcement-learning algorithms. Backpropagation trains neural networks and may be used inside deep RL, but it is not itself typically classified as an RL algorithm.",
+    "keyTakeaway": "Backpropagation is a neural-network training method, not a standalone reinforcement-learning algorithm.",
     "optionRationales": {
       "A": "Q-learning is a standard reinforcement-learning algorithm, so it cannot satisfy a request for a method not typically used in RL.",
       "B": "Sarsa is a standard on-policy temporal-difference control method, so it is plainly used in reinforcement learning.",
-      "C": "Backpropagation is widely used inside deep RL to train networks, but it is an optimization mechanism rather than a standalone RL algorithm, making the stem ambiguous.",
+      "C": "Backpropagation is the best available answer because it is a general neural-network training method rather than an RL algorithm.",
       "D": "DDPG is a reinforcement-learning actor–critic algorithm for continuous actions, so it is definitely used in RL."
     },
     "conceptual": {
-      "kind": "freeform",
-      "acceptedLetters": [],
-      "display": "None of the options: Q-learning, Sarsa, DDPG, and backpropagation are all used in RL, though backpropagation is an optimizer rather than an RL algorithm.",
+      "kind": "single",
+      "acceptedLetters": ["C"],
+      "display": "C — Backpropagation",
       "aliases": []
     }
   },

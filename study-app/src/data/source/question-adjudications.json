@@ -385,9 +385,9 @@
       "duplicate_cluster": null
     },
     "Q048": {
-      "verdict": "incorrect",
-      "correct_answer": "None of the options: Q-learning, Sarsa, DDPG, and backpropagation are all used in RL, though backpropagation is an optimizer rather than an RL algorithm.",
-      "why": "Sutton–Barto evidence contradicts the supplied key. Backpropagation is widely used to train neural function approximators in RL, including DQN, so it is not a method 'not typically used' in RL. Reference answer: None of the options: Q-learning, Sarsa, DDPG, and backpropagation are all used in RL, though backpropagation is an optimizer rather than an RL algorithm.",
+      "verdict": "acceptable-with-caveat",
+      "correct_answer": "C — Backpropagation",
+      "why": "C is the best available answer: Q-learning, Sarsa, and DDPG are RL algorithms, whereas backpropagation is a general neural-network training method that may be used inside deep RL but is not itself an RL algorithm.",
       "basis": "book supplemental evidence",
       "source_quality": "verify",
       "duplicate_cluster": null

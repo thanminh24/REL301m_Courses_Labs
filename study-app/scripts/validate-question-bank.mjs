@@ -72,8 +72,8 @@ if (qa.rows.length !== 317) errors.push("QA manifest must contain 317 rows.");
 
 const expectedVerdicts = {
   correct: 149,
-  "acceptable-with-caveat": 98,
-  incorrect: 32,
+  "acceptable-with-caveat": 99,
+  incorrect: 31,
   "bank-key-only": 38,
 };
 const expectedEvidence = { lecture: 225, book: 54, "question-bank": 38 };

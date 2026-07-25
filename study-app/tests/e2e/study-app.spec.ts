@@ -5,7 +5,7 @@ import qa from "../../src/data/generated/content-qa-manifest.json";
 
 const STUDY_KEY = "rel301m-study-state-v1";
 const FLASHCARD_KEY = "rel301m-flashcard-session-v1";
-const LEARN_KEY = "rel301m-learn-session-v1";
+const LEARN_KEY = "rel301m-learn-session-v2";
 const TEST_KEY = "rel301m-test-session-v1";
 const MATCH_KEY = "rel301m-match-session-v1";
 const routes = [
@@ -210,7 +210,7 @@ test("mastery requires successful recall in two distinct sessions", async ({
   expect(study.mastered).toContain("Q001");
 });
 
-test("Learn restores an active response and can reset to a fresh round", async ({
+test("Learn restores wrong-answer feedback and can reset the round", async ({
   page,
 }) => {
   await page.goto("/learn/");
@@ -221,11 +221,16 @@ test("Learn restores an active response and can reset to a fresh round", async (
     page,
     LEARN_KEY,
   );
-  await page.locator(".answer-option").first().click();
+  const questionId = await page.locator(".card-meta span").first().innerText();
+  const current = bank.questions.find((item) => item.id === questionId)!;
+  const wrongIndex = ["A", "B", "C", "D"].findIndex(
+    (letter) => letter !== current.examAnswer.letter,
+  );
+  await page.locator(".answer-option").nth(wrongIndex).click();
   await page.getByRole("button", { name: "Check answer" }).click();
-  await expect(page.getByText(/Correct for the exam bank|Bank answer:/)).toBeVisible();
+  await expect(page.getByText(/Best answer:/)).toBeVisible();
   await page.reload();
-  await expect(page.getByText(/Correct for the exam bank|Bank answer:/)).toBeVisible();
+  await expect(page.getByText(/Best answer:/)).toBeVisible();
   const resumed = await readStorage<{
     seed: number;
     queueIds: string[];
@@ -246,74 +251,16 @@ test("Learn restores an active response and can reset to a fresh round", async (
   expect(reset.checked).toBe(false);
 });
 
-test("Learn unlocks exact curated typed recall after prior exposure", async ({
-  page,
-}) => {
-  const now = new Date().toISOString();
-  await page.goto("/");
-  await page.evaluate(
-    ({ studyKey, learnKey, hash, at }) => {
-      localStorage.setItem(
-        studyKey,
-        JSON.stringify({
-          version: 1,
-          dataHash: hash,
-          favorites: [],
-          mastered: [],
-          difficult: [],
-          attempts: [
-            {
-              questionId: "Q001",
-              mode: "learn",
-              sessionId: "earlier-session",
-              correct: true,
-              conceptCorrect: true,
-              selected: ["B"],
-              at,
-            },
-          ],
-          dailyGoal: 20,
-          lastStudiedAt: at,
-        }),
-      );
-      localStorage.setItem(
-        learnKey,
-        JSON.stringify({
-          version: 1,
-          dataHash: hash,
-          queueIds: Array.from(
-            { length: 10 },
-            (_, index) => `Q${String(index + 1).padStart(3, "0")}`,
-          ),
-          index: 0,
-          selected: [],
-          checked: false,
-          score: 0,
-          seed: 50,
-          responseMode: "choice",
-          typedResponse: "",
-          typedFailures: 0,
-          needsRequeue: false,
-        }),
-      );
-    },
-    {
-      studyKey: STUDY_KEY,
-      learnKey: LEARN_KEY,
-      hash: qa.datasetHash,
-      at: now,
-    },
-  );
+test("Learn advances immediately after the best answer", async ({ page }) => {
   await page.goto("/learn/");
-  await page.getByRole("button", { name: "Type from memory" }).click();
-  const response = page.getByPlaceholder(/Recall the answer/);
-  await response.fill("wrong nearby idea");
+  const firstId = await page.locator(".card-meta span").first().innerText();
+  const current = bank.questions.find((item) => item.id === firstId)!;
+  await page.locator(".answer-option").nth(
+    ["A", "B", "C", "D"].indexOf(current.examAnswer.letter),
+  ).click();
   await page.getByRole("button", { name: "Check answer" }).click();
-  await expect(page.getByText(/Try once more/)).toBeVisible();
-  await response.fill(bank.questions[0].examAnswer.text);
-  await page.getByRole("button", { name: "Check answer" }).click();
-  await expect(page.getByText("Correct for the exam bank")).toBeVisible();
-  await expect(page.getByText(/conceptually accurate/)).toBeVisible();
+  await expect(page.locator(".card-meta span").first()).not.toHaveText(firstId);
+  await expect(page.getByText(/Best answer:/)).toHaveCount(0);
 });
 
 test("Test instant-practice mode reveals feedback after a response", async ({

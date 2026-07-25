@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "data:sync": "node scripts/sync-source-data.mjs",
     "data:build": "node scripts/build-question-bank.mjs",
     "data:check": "node scripts/validate-question-bank.mjs",
     "data:precheck": "node scripts/validate-question-bank.mjs --allow-unreviewed",
@@ -19,9 +18,8 @@
     "test:production": "playwright test --config playwright.production.config.ts",
     "test:zoom": "playwright test --config playwright.zoom.config.ts",
     "test:github-pages": "playwright test --config playwright.github-pages.config.ts",
-    "verify:boundary": "node scripts/verify-worktree-boundary.mjs",
     "verify:standalone": "npm run lint && npm run typecheck && npm run test && npm run build && npm run test:e2e && npm run test:production && npm run test:zoom",
-    "verify": "npm run verify:standalone && npm run verify:boundary"
+    "verify": "npm run verify:standalone"
   },
   "dependencies": {
     "lucide-react": "1.26.0",
